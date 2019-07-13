@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f90ae2f8-9b3c-4c79-bee4-e08863266d74" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../IceCreamShop_Starter/IceCreamShop/Images.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a/a.xcodeproj/project.pbxproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a/a.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a/a.xcodeproj/project.xcworkspace/xcuserdata/noriki.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a/a.xcodeproj/xcuserdata/noriki.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a/a/AppDelegate.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a/a/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a/a/Base.lproj/Main.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a/a/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a/a/ViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a/a/a.entitlements" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a/aTests/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a/aTests/aTests.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a/aUITests/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a/aUITests/aUITests.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a/map/ActionViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a/map/Base.lproj/MainInterface.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a/map/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter04_jquery/.idea/chapter04_jquery.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter04_jquery/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter04_jquery/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter04_jquery/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter04_jquery/calc_tax/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter04_jquery/calc_tax/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter04_jquery/calc_tax/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter04_jquery/lib/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter04_jquery/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter04_jquery/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter04_jquery/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter04_jquery/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter04_jquery/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter04_jquery/lib/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter04_jquery/lib/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter04_jquery/lib/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/chapter05_form_parts.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questionnaire/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questionnaire/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questionnaire/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../map/map.xcodeproj/project.pbxproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../map/map.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../map/map.xcodeproj/project.xcworkspace/xcuserdata/noriki.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../map/map.xcodeproj/xcuserdata/noriki.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../map/map/AppDelegate.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../map/map/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../map/map/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../map/map/Base.lproj/Main.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../map/map/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../map/map/ViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../map/mapTests/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../map/mapTests/mapTests.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../map/mapUITests/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../map/mapUITests/mapUITests.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapter04_jquery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chapter04_jquery/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="216" />
+    <option name="y" value="159" />
+    <option name="width" value="1169" />
+    <option name="height" value="718" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="chapter05_form_parts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter05_form_parts" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f90ae2f8-9b3c-4c79-bee4-e08863266d74" name="Default Changelist" comment="" />
+      <created>1556461589625</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1556461589625</updated>
+      <workItem from="1556461590954" duration="127000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="127000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="216" y="159" width="1169" height="718" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
