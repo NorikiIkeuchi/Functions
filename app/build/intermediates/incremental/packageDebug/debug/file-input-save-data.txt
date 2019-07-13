@@ -1,7 +1,0 @@
-#Internal package file, do not edit.
-#Wed Jul 10 18:01:47 JST 2019
-0.baseType=DIRECTORY
-0.base=/Users/noriki/Desktop/hack/app/build/intermediates/transforms/dexMerger/debug/0
-0.path=classes.dex
-0.set=DEX
-count=1
