@@ -7,11 +7,14 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.view.View;
+
 
 public class GameActivity extends AppCompatActivity {
     TextView textTIme;
     ProgressBar pb;
     int time;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +46,11 @@ public class GameActivity extends AppCompatActivity {
 
         TextView tv = findViewById(R.id.textView);
 
+
         switch (nannido){
             case 10:
                 tv.setText("中学一年生");
+
                 break;
             case 11:
                 tv.setText("中学二年生");
@@ -68,4 +73,5 @@ public class GameActivity extends AppCompatActivity {
         }
 
     }
+
 }
