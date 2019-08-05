@@ -7,17 +7,22 @@
     android:layout_height="match_parent">
 
     <com.example.draw.main.MyView
-        android:id="@+id/myView"
-        android:layout_width="366dp"
-        android:layout_height="256dp"
-        android:layout_marginTop="40dp"
+        android:id="@+id/myView2"
+        android:layout_width="394dp"
+        android:layout_height="231dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
         android:background="#ccc"
-        android:paddingLeft="23dp"
+        android:paddingLeft="20dp"
         android:paddingBottom="40dp"
         app2:layout_constraintEnd_toEndOf="parent"
-        app2:layout_constraintHorizontal_bias="0.538"
+        app2:layout_constraintHorizontal_bias="0.0"
         app2:layout_constraintStart_toStartOf="parent"
         app2:layout_constraintTop_toTopOf="parent"
+        app:exampleColor="#33b5e5"
+        app:exampleDimension="24sp"
+        app:exampleDrawable="@android:drawable/ic_menu_add"
         app:exampleString="Hello, MyView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

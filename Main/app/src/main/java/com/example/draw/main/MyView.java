@@ -5,14 +5,10 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.View;
-
-import java.nio.FloatBuffer;
-
 
 /**
  * TODO: document your custom view class.
@@ -85,47 +81,10 @@ public class MyView extends View {
     }
 
     @Override
-    protected void onDraw(Canvas canvas){
-        super.onDraw(canvas);
-        canvas.drawColor(Color.WHITE);
-        Paint p = new Paint();
-        p.setColor(Color.BLUE);
-        canvas.drawRect(new RectF(50, 50, 150, 550), p);
-        p.setColor(Color.RED);
-        canvas.drawOval(new RectF(100, 100, 200, 200), p);
-        Paint mPaint = new Paint();
-        mPaint.setStyle(Paint.Style.STROKE); // 塗りつぶし無し
-
-        canvas.drawCircle(750, 150, 25, mPaint); // 半径25
-        canvas.drawCircle(150, 150, 50, mPaint); // 半径50
-        canvas.drawCircle(150, 150, 100, mPaint); // 半径100
-
-        mPaint.setStrokeWidth(1.0f);
-
-        FloatBuffer fb = FloatBuffer.allocate(300);
-        fb.put(100);
-        fb.put(100);
-        fb.put(200);
-        fb.put(200);
-
-        fb.put(200);
-        fb.put(200);
-        fb.put(250);
-        fb.put(200);
-
-        fb.put(250);
-        fb.put(200);
-        fb.put(200);
-        fb.put(300);
-
-        canvas.drawLines(fb.array(), mPaint);
-    }
-
-
-
-    /*@Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+
+        canvas.drawColor(Color.RED);
 
         // TODO: consider storing these as member variables to reduce
         // allocations per draw cycle.
@@ -229,5 +188,4 @@ public class MyView extends View {
     public void setExampleDrawable(Drawable exampleDrawable) {
         mExampleDrawable = exampleDrawable;
     }
-
 }
