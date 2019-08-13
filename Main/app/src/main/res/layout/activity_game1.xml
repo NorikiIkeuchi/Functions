@@ -64,6 +64,7 @@
         app:layout_constraintTop_toBottomOf="@+id/progressBar"
         app:layout_constraintVertical_bias="0.917" />
 
+<<<<<<< HEAD
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="260dp"
@@ -140,6 +141,9 @@
         app:srcCompat="@drawable/rr" />
 
     <!--<include layout="@layout/sample_my_view" />-->
+=======
+    <include layout="@layout/sample_my_view" />
+>>>>>>> origin/master
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
