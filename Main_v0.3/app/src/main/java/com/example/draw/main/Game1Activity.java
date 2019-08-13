@@ -149,7 +149,7 @@ public class Game1Activity extends AppCompatActivity {
 //                break;
 //        }
 
-        //ボタンクリックで画像を最前面に移動
+
         answerButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -270,16 +270,33 @@ public class Game1Activity extends AppCompatActivity {
         return rndNum;
     }
 
+    //ボタンクリックで画像を最前面に移動
     private void numberCertain(int Num[], int number) {
+        int array[];
+        array = new int[4];
 
         if (Num[number] == 1) {
             vi2.bringToFront();
+            array[0] = 0;
         } else if (Num[number] == 2) {
             vi3.bringToFront();
+            array[1] = 1;
         } else if (Num[number] == 3) {
             vi4.bringToFront();
+            array[2] = 2;
         } else if (Num[number] == 4) {
             vi6.bringToFront();
+            array[3] = 3;
         }
+        else if(true){
+            time = time - 10;
+        }
+
+        if(((array[0]==0)&&(array[1]==1))&&((array[2]==2)&&(array[3]==3))){
+            Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
+            startActivity(intent);
+        }
+
     }
+
 }
