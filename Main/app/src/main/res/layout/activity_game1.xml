@@ -29,182 +29,119 @@
         android:layout_marginTop="8dp"
         android:text="test"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/progressBar"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.582" />
+    <!--<TextView-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="TextView"-->
+        <!--android:textSize="36sp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:layout_constraintVertical_bias="0.373" />-->
 
     <Button
         android:id="@+id/buttonResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="294dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="29dp"
-        android:layout_marginBottom="29dp"
+        android:layout_marginBottom="296dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        app:layout_constraintVertical_bias="0.917" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-<<<<<<< HEAD
-    <ImageView
-        android:id="@+id/imageView2"
-=======
-<<<<<<< HEAD
+
     <ImageView
         android:id="@+id/imageView"
->>>>>>> 4d5944ab948fbd2862938e88cab58416de86104f
         android:layout_width="260dp"
         android:layout_height="200dp"
         android:layout_marginStart="75dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="75dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonResult"
-<<<<<<< HEAD
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
-=======
         app:layout_constraintEnd_toEndOf="parent"
->>>>>>> 4d5944ab948fbd2862938e88cab58416de86104f
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        app:layout_constraintVertical_bias="0.096"
-<<<<<<< HEAD
-        app:srcCompat="@drawable/hh" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-=======
-        app:srcCompat="@drawable/a" />
+        app:srcCompat="@drawable/a"
+        tools:layout_editor_absoluteY="32dp" />
 
     <ImageView
         android:id="@+id/imageView2"
->>>>>>> 4d5944ab948fbd2862938e88cab58416de86104f
         android:layout_width="260dp"
         android:layout_height="200dp"
         android:layout_marginStart="75dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="75dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonResult"
-<<<<<<< HEAD
-        app:layout_constraintEnd_toEndOf="parent"
-=======
         app:layout_constraintEnd_toStartOf="@+id/imageView"
->>>>>>> 4d5944ab948fbd2862938e88cab58416de86104f
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        app:layout_constraintVertical_bias="0.096"
-<<<<<<< HEAD
-        app:srcCompat="@drawable/ll" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-=======
-        app:srcCompat="@drawable/hh" />
+        app:srcCompat="@drawable/hh"
+        tools:layout_editor_absoluteY="32dp" />
 
     <ImageView
         android:id="@+id/imageView3"
->>>>>>> 4d5944ab948fbd2862938e88cab58416de86104f
         android:layout_width="260dp"
         android:layout_height="200dp"
         android:layout_marginStart="75dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="75dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonResult"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        app:layout_constraintVertical_bias="0.096"
-<<<<<<< HEAD
-        app:srcCompat="@drawable/rr" />
-=======
-        app:srcCompat="@drawable/ll" />
->>>>>>> 4d5944ab948fbd2862938e88cab58416de86104f
+        app:srcCompat="@drawable/ll"
+        tools:layout_editor_absoluteY="32dp" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="260dp"
         android:layout_height="200dp"
         android:layout_marginStart="75dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="75dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonResult"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        app:layout_constraintVertical_bias="0.096"
-        app:srcCompat="@drawable/uu" />
+        app:srcCompat="@drawable/uu"
+        tools:layout_editor_absoluteY="32dp" />
 
     <ImageView
-<<<<<<< HEAD
-        android:id="@+id/imageView"
-=======
         android:id="@+id/imageView6"
->>>>>>> 4d5944ab948fbd2862938e88cab58416de86104f
         android:layout_width="260dp"
         android:layout_height="200dp"
         android:layout_marginStart="75dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="75dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonResult"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        app:layout_constraintVertical_bias="0.096"
-<<<<<<< HEAD
-        app:srcCompat="@drawable/a" />
-
-    <!--<include layout="@layout/sample_my_view" />-->
-=======
-        app:srcCompat="@drawable/rr" />
+        app:srcCompat="@drawable/rr"
+        tools:layout_editor_absoluteY="32dp" />
 
     <TextView
         android:id="@+id/text_question"
-        android:layout_width="368dp"
-        android:layout_height="304dp"
+        android:layout_width="172dp"
+        android:layout_height="73dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="372dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="350dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_question">
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:layout_width="415dp"
+        android:layout_height="241dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -272,12 +209,6 @@
                 android:text="Button" />
         </LinearLayout>
     </ScrollView>
-
-    <!--<include layout="@layout/sample_my_view" />-->
-=======
-    <include layout="@layout/sample_my_view" />
->>>>>>> origin/master
->>>>>>> 4d5944ab948fbd2862938e88cab58416de86104f
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
