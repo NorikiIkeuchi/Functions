@@ -1,0 +1,154 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:2:1-21:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/noriki/.gradle/caches/transforms-2/files-2.1/3eb3ff099ded4ddc8d2c068093fe09ca/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/noriki/.gradle/caches/transforms-2/files-2.1/74e34317f2218917de4dd0a86cf65938/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/6b4f9b0cc90604783565bd9797d45992/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/0f100b203cd04209edecc90e46bf96de/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/a234a02eb1eded49f8d9d6658c241b1e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/bfe34dc3ce6767b410dbaa259f612eb9/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/noriki/.gradle/caches/transforms-2/files-2.1/8c135badf329ea7a9648935a773fc0a5/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/ea79596c6aaf458c280fd36ce8818f91/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/110ba5c90be6616c2980e9237aaf52c1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/e5a516f2a1415833e632ce04a8193f1c/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/cd5923f8ed42e2b800fe4d983224fff7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/4e607b4b951e8b1febb33fa77faa6891/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/ffa13d4cb340ec18c23d26157ea81752/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/3495a8a2584d3a385fba59ba1d99031a/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/f3d8fa36988e0758e1078d2dc5e7fa90/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.1] /Users/noriki/.gradle/caches/transforms-2/files-2.1/ebf1f25cda39ec605f92cde5df59d905/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/e53bb218acdf7574cbebd8603737394f/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/aef33403c2a612445335a6d714d8a682/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/26504279938c05aad9a2e162c0fd059e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/87b233be6ad6a4528f5f27e52a6f7ba9/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/3e86b3159ef5c9ce95e5df3d14082747/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/34fdfe0dfe325c1c948c1a707c5f6e3f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/fd3fa8b7ca9905be7356d3b1e9e80094/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/f9d632f454b6252372937b6c59554b75/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/0915fb427b18e8db2c9729c097c1ee2b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/aba683f751c77014cc735f26ea20ec67/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/0c629d7f7041a2bec99e064480d9b8fc/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:2:1-21:12
+	package
+		ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:3:5-31
+		INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml
+		ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:2:1-21:12
+		INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml
+		ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:2:1-21:12
+		INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:5:5-19:19
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/noriki/.gradle/caches/transforms-2/files-2.1/74e34317f2218917de4dd0a86cf65938/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/noriki/.gradle/caches/transforms-2/files-2.1/74e34317f2218917de4dd0a86cf65938/AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.0.1] /Users/noriki/.gradle/caches/transforms-2/files-2.1/ebf1f25cda39ec605f92cde5df59d905/AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.1] /Users/noriki/.gradle/caches/transforms-2/files-2.1/ebf1f25cda39ec605f92cde5df59d905/AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/e53bb218acdf7574cbebd8603737394f/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/e53bb218acdf7574cbebd8603737394f/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.1] /Users/noriki/.gradle/caches/transforms-2/files-2.1/ebf1f25cda39ec605f92cde5df59d905/AndroidManifest.xml:22:18-86
+	android:supportsRtl
+		ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.example.quiz.MainActivity
+ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:12:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml:16:27-74
+uses-sdk
+INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml
+INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml
+MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/noriki/.gradle/caches/transforms-2/files-2.1/3eb3ff099ded4ddc8d2c068093fe09ca/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/noriki/.gradle/caches/transforms-2/files-2.1/3eb3ff099ded4ddc8d2c068093fe09ca/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/noriki/.gradle/caches/transforms-2/files-2.1/74e34317f2218917de4dd0a86cf65938/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/noriki/.gradle/caches/transforms-2/files-2.1/74e34317f2218917de4dd0a86cf65938/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/6b4f9b0cc90604783565bd9797d45992/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/6b4f9b0cc90604783565bd9797d45992/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/0f100b203cd04209edecc90e46bf96de/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/0f100b203cd04209edecc90e46bf96de/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/a234a02eb1eded49f8d9d6658c241b1e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/a234a02eb1eded49f8d9d6658c241b1e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/bfe34dc3ce6767b410dbaa259f612eb9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/bfe34dc3ce6767b410dbaa259f612eb9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/noriki/.gradle/caches/transforms-2/files-2.1/8c135badf329ea7a9648935a773fc0a5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/noriki/.gradle/caches/transforms-2/files-2.1/8c135badf329ea7a9648935a773fc0a5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/ea79596c6aaf458c280fd36ce8818f91/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/ea79596c6aaf458c280fd36ce8818f91/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/110ba5c90be6616c2980e9237aaf52c1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/110ba5c90be6616c2980e9237aaf52c1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/e5a516f2a1415833e632ce04a8193f1c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/e5a516f2a1415833e632ce04a8193f1c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/cd5923f8ed42e2b800fe4d983224fff7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/cd5923f8ed42e2b800fe4d983224fff7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/4e607b4b951e8b1febb33fa77faa6891/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/4e607b4b951e8b1febb33fa77faa6891/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/ffa13d4cb340ec18c23d26157ea81752/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/ffa13d4cb340ec18c23d26157ea81752/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/3495a8a2584d3a385fba59ba1d99031a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/3495a8a2584d3a385fba59ba1d99031a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/f3d8fa36988e0758e1078d2dc5e7fa90/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/f3d8fa36988e0758e1078d2dc5e7fa90/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] /Users/noriki/.gradle/caches/transforms-2/files-2.1/ebf1f25cda39ec605f92cde5df59d905/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] /Users/noriki/.gradle/caches/transforms-2/files-2.1/ebf1f25cda39ec605f92cde5df59d905/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/e53bb218acdf7574cbebd8603737394f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/e53bb218acdf7574cbebd8603737394f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/aef33403c2a612445335a6d714d8a682/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/aef33403c2a612445335a6d714d8a682/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/26504279938c05aad9a2e162c0fd059e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/26504279938c05aad9a2e162c0fd059e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/87b233be6ad6a4528f5f27e52a6f7ba9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/87b233be6ad6a4528f5f27e52a6f7ba9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/3e86b3159ef5c9ce95e5df3d14082747/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/3e86b3159ef5c9ce95e5df3d14082747/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/34fdfe0dfe325c1c948c1a707c5f6e3f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/34fdfe0dfe325c1c948c1a707c5f6e3f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/fd3fa8b7ca9905be7356d3b1e9e80094/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/fd3fa8b7ca9905be7356d3b1e9e80094/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/f9d632f454b6252372937b6c59554b75/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/f9d632f454b6252372937b6c59554b75/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/0915fb427b18e8db2c9729c097c1ee2b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/0915fb427b18e8db2c9729c097c1ee2b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/aba683f751c77014cc735f26ea20ec67/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/aba683f751c77014cc735f26ea20ec67/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/0c629d7f7041a2bec99e064480d9b8fc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/noriki/.gradle/caches/transforms-2/files-2.1/0c629d7f7041a2bec99e064480d9b8fc/AndroidManifest.xml:20:5-44
+INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml
+INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml
+		ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml
+		ADDED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/noriki/Desktop/hack/Quiz/app/src/main/AndroidManifest.xml

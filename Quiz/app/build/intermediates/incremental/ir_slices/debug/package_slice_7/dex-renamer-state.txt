@@ -1,0 +1,4 @@
+#Tue Aug 13 11:14:24 JST 2019
+base.0=/Users/noriki/Desktop/hack/Quiz/app/build/intermediates/transforms/dexMerger/debug/7
+path.0=classes.dex
+renamed.0=classes.dex
