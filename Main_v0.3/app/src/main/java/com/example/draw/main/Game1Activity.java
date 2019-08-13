@@ -26,7 +26,11 @@ import au.com.bytecode.opencsv.CSVReader;
 
 public class Game1Activity extends AppCompatActivity {
     //csvファイルの問題数
-    private int NumberOfQuestions = 1;
+    private int NumberOfQuestions = 30;
+    //正解の数
+    private int NumberOfAnswer = 4;
+    //難易度別に問題を選択するための変数
+    private int NumberOfSection = 0;
 
     private Button answerButton1;
     private Button answerButton2;
@@ -38,11 +42,12 @@ public class Game1Activity extends AppCompatActivity {
     private Button answerButton8;
     private Button answerButton9;
     private Button answerButton10;
-    private String questions[][] = new String[10][11];
+    private String questions[][] = new String[30][11];
     TextView textTIme;
     ProgressBar pb;
     int time;
     int count;
+    int answer_count = 0;
     private ImageView vi;
     private ImageView vi2;
     private ImageView vi3;
@@ -72,6 +77,167 @@ public class Game1Activity extends AppCompatActivity {
         vi4 = findViewById(R.id.imageView4);
         vi6 = findViewById(R.id.imageView6);
 
+        //GamestartActivity.javaから受け取った変数nannidoから問題の正解数と、quiz_data.csvからの問題選択を行う配列questions[]に使用する変数NumberOfQuestionの設定を行う
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null){
+            int nannido = bundle.getInt("難易度");
+            switch (nannido){
+                case 11:
+                    //中学一年生レベル1
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 0;
+                    break;
+                case 12:
+                    //中学一年生レベル2
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 1;
+                    break;
+                case 13:
+                    //中学一年生レベル3
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 2;
+                    break;
+                case 14:
+                    //中学一年生レベル4
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 3;
+                    break;
+                case 15:
+                    //中学一年生レベル5
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 4;
+                    break;
+                case 21:
+                    //中学二年生レベル1
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 5;
+                    break;
+                case 22:
+                    //中学二年生レベル2
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 6;
+                    break;
+                case 23:
+                    //中学二年生レベル3
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 7;
+                    break;
+                case 24:
+                    //中学二年生レベル4
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 8;
+                    break;
+                case 25:
+                    //中学二年生レベル5
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 9;
+                    break;
+                case 31:
+                    //中学三年生レベル1
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 10;
+                    break;
+                case 32:
+                    //中学三年生レベル2
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 11;
+                    break;
+                case 33:
+                    //中学三年生レベル3
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 12;
+                    break;
+                case 34:
+                    //中学三年生レベル4
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 13;
+                    break;
+                case 35:
+                    //中学三年生レベル5
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 14;
+                    break;
+                case 111:
+                    //高校一年生レベル1
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 15;
+                    break;
+                case 112:
+                    //高校一年生レベル2
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 16;
+                    break;
+                case 113:
+                    //高校一年生レベル3
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 17;
+                    break;
+                case 114:
+                    //高校一年生レベル4
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 18;
+                    break;
+                case 115:
+                    //高校一年生レベル5
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 19;
+                    break;
+                case 121:
+                    //高校二年生レベル1
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 20;
+                    break;
+                case 122:
+                    //高校二年生レベル2
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 21;
+                    break;
+                case 123:
+                    //高校二年生レベル3
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 22;
+                    break;
+                case 124:
+                    //高校二年生レベル4
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 23;
+                    break;
+                case 125:
+                    //高校二年生レベル5
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 24;
+                    break;
+                case 131:
+                    //高校三年生レベル1
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 25;
+                    break;
+                case 132:
+                    //高校三年生レベル2
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 26;
+                    break;
+                case 133:
+                    //高校三年生レベル3
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 27;
+                    break;
+                case 134:
+                    //高校三年生レベル4
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 28;
+                    break;
+                case 135:
+                    //高校三年生レベル5
+                    NumberOfAnswer = 4;
+                    NumberOfSection = 29;
+                    break;
+                default:
+                    //不正
+                    break;
+            }
+        }
+
 
         //csvファイルの読み込み
         try {
@@ -87,7 +253,7 @@ public class Game1Activity extends AppCompatActivity {
         }
 
         // 問題をボタンのラベルとして表示
-        final int Num[] = setQuizText();
+        final int Num[] = setQuizText(NumberOfSection);
 
         textTIme = findViewById(R.id.textTime);
         pb = findViewById(R.id.progressBar);
@@ -99,11 +265,20 @@ public class Game1Activity extends AppCompatActivity {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                if(time <= 0) return;
-                time--;
-                textTIme.setText(String.valueOf(time));
-                pb.setProgress(time);
-                handler.postDelayed(this, 1000);
+                //時間切れ時に画面遷移
+                if(time <= 0) {
+                    Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
+                    //画面遷移時に得点をResultActivity.javaのpointに渡す
+                    intent.putExtra("point", time);
+                    startActivity(intent);
+                }
+                else{
+                    time--;
+                    textTIme.setText(String.valueOf(time));
+                    pb.setProgress(time);
+                    handler.postDelayed(this, 1000);
+                }
+
             }
         };
 
@@ -111,43 +286,16 @@ public class Game1Activity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //終了ボタンを押した時にtimeを0に設定
+                time = 0;
                 Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
+                //画面遷移時に得点をResultActivity.javaのpointに渡す
+                intent.putExtra("point", time);
                 startActivity(intent);
             }
         });
 
         handler.post(runnable);
-
-//        Intent intent = getIntent();
-//        int nannido = intent.getIntExtra("難易度", 0);
-//
-//        TextView tv = findViewById(R.id.textView);
-//
-//
-//        switch (nannido){
-//            case 10:
-//                tv.setText("中学一年生");
-//
-//                break;
-//            case 11:
-//                tv.setText("中学二年生");
-//                break;
-//            case 12:
-//                tv.setText("中学三年生");
-//                break;
-//            case 13:
-//                tv.setText("高校一年生");
-//                break;
-//            case 14:
-//                tv.setText("高校二年生");
-//                break;
-//            case 15:
-//                tv.setText("高校三年生");
-//                break;
-//            default:
-//                tv.setText("不正");
-//                break;
-//        }
 
 
         answerButton1.setOnClickListener(new View.OnClickListener() {
@@ -155,6 +303,9 @@ public class Game1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 count = 0;
                 numberCertain(Num, count);
+
+                //ボタン無効化
+                answerButton1.setEnabled(false);
             }
         });
 
@@ -163,6 +314,9 @@ public class Game1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 count = 1;
                 numberCertain(Num, count);
+
+                //ボタン無効化
+                answerButton2.setEnabled(false);
             }
         });
 
@@ -171,6 +325,9 @@ public class Game1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 count = 2;
                 numberCertain(Num,count);
+
+                //ボタン無効化
+                answerButton3.setEnabled(false);
             }
         });
 
@@ -179,6 +336,9 @@ public class Game1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 count = 3;
                 numberCertain(Num, count);
+
+                //ボタン無効化
+                answerButton4.setEnabled(false);
             }
         });
 
@@ -187,6 +347,9 @@ public class Game1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 count = 4;
                 numberCertain(Num, count);
+
+                //ボタン無効化
+                answerButton5.setEnabled(false);
             }
         });
 
@@ -195,6 +358,9 @@ public class Game1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 count = 5;
                 numberCertain(Num,count);
+
+                //ボタン無効化
+                answerButton6.setEnabled(false);
             }
         });
 
@@ -203,6 +369,9 @@ public class Game1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 count = 6;
                 numberCertain(Num, count);
+
+                //ボタン無効化
+                answerButton7.setEnabled(false);
             }
         });
 
@@ -211,6 +380,9 @@ public class Game1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 count = 7;
                 numberCertain(Num, count);
+
+                //ボタン無効化
+                answerButton8.setEnabled(false);
             }
         });
 
@@ -219,6 +391,9 @@ public class Game1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 count = 8;
                 numberCertain(Num, count);
+
+                //ボタン無効化
+                answerButton9.setEnabled(false);
             }
         });
 
@@ -227,6 +402,9 @@ public class Game1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 count = 9;
                 numberCertain(Num, count);
+
+                //ボタン無効化
+                answerButton10.setEnabled(false);
             }
         });
 
@@ -253,47 +431,56 @@ public class Game1Activity extends AppCompatActivity {
     }
 
     //ボタンに問題をセットするメソッド
-    private int[] setQuizText(){
-        int rndNum[] = createRandomArray(10, 0);
+    private int[] setQuizText(int NumberOfSection){
+        int rndNum[] = createRandomArray(10, 1);
         //選択肢をセット
-        answerButton1.setText(questions[0][rndNum[0]]);
-        answerButton2.setText(questions[0][rndNum[1]]);
-        answerButton3.setText(questions[0][rndNum[2]]);
-        answerButton4.setText(questions[0][rndNum[3]]);
-        answerButton5.setText(questions[0][rndNum[4]]);
-        answerButton6.setText(questions[0][rndNum[5]]);
-        answerButton7.setText(questions[0][rndNum[6]]);
-        answerButton8.setText(questions[0][rndNum[7]]);
-        answerButton9.setText(questions[0][rndNum[8]]);
-        answerButton10.setText(questions[0][rndNum[9]]);
+        answerButton1.setText(questions[NumberOfSection][rndNum[0]]);
+        answerButton2.setText(questions[NumberOfSection][rndNum[1]]);
+        answerButton3.setText(questions[NumberOfSection][rndNum[2]]);
+        answerButton4.setText(questions[NumberOfSection][rndNum[3]]);
+        answerButton5.setText(questions[NumberOfSection][rndNum[4]]);
+        answerButton6.setText(questions[NumberOfSection][rndNum[5]]);
+        answerButton7.setText(questions[NumberOfSection][rndNum[6]]);
+        answerButton8.setText(questions[NumberOfSection][rndNum[7]]);
+        answerButton9.setText(questions[NumberOfSection][rndNum[8]]);
+        answerButton10.setText(questions[NumberOfSection][rndNum[9]]);
 
         return rndNum;
     }
 
     //ボタンクリックで画像を最前面に移動
     private void numberCertain(int Num[], int number) {
-        int array[];
-        array = new int[4];
 
         if (Num[number] == 1) {
             vi2.bringToFront();
-            array[0] = 0;
+
+            //正解時にカウント
+            answer_count++;
         } else if (Num[number] == 2) {
             vi3.bringToFront();
-            array[1] = 1;
+
+            //正解時にカウント
+            answer_count++;
         } else if (Num[number] == 3) {
             vi4.bringToFront();
-            array[2] = 2;
+
+            //正解時にカウント
+            answer_count++;
         } else if (Num[number] == 4) {
             vi6.bringToFront();
-            array[3] = 3;
+
+            //正解時にカウント
+            answer_count++;
         }
         else if(true){
             time = time - 10;
         }
 
-        if(((array[0]==0)&&(array[1]==1))&&((array[2]==2)&&(array[3]==3))){
+        //解答の正解数が設定した問題の正解数と一致したときに画面遷移
+        if(answer_count == NumberOfAnswer){
             Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
+            //画面遷移時に得点をResultActivity.javaのpointに渡す
+            intent.putExtra("point", time);
             startActivity(intent);
         }
 
