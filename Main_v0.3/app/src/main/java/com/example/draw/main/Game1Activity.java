@@ -42,6 +42,12 @@ public class Game1Activity extends AppCompatActivity {
     TextView textTIme;
     ProgressBar pb;
     int time;
+    int count;
+    private ImageView vi;
+    private ImageView vi2;
+    private ImageView vi3;
+    private ImageView vi4;
+    private ImageView vi6;
 
 
     @Override
@@ -60,6 +66,12 @@ public class Game1Activity extends AppCompatActivity {
         answerButton8 = (Button) findViewById(R.id.button8);
         answerButton9 = (Button) findViewById(R.id.button9);
         answerButton10 = (Button) findViewById(R.id.button10);
+        vi = findViewById(R.id.imageView);
+        vi2 = findViewById(R.id.imageView2);
+        vi3 = findViewById(R.id.imageView3);
+        vi4 = findViewById(R.id.imageView4);
+        vi6 = findViewById(R.id.imageView6);
+
 
         //csvファイルの読み込み
         try {
@@ -75,7 +87,7 @@ public class Game1Activity extends AppCompatActivity {
         }
 
         // 問題をボタンのラベルとして表示
-        setQuizText();
+        final int Num[] = setQuizText();
 
         textTIme = findViewById(R.id.textTime);
         pb = findViewById(R.id.progressBar);
@@ -137,28 +149,89 @@ public class Game1Activity extends AppCompatActivity {
 //                break;
 //        }
 
-        //画像の定義
-        final ImageView vi = findViewById(R.id.imageView);
-        final ImageView vi2 = findViewById(R.id.imageView2);
-
         //ボタンクリックで画像を最前面に移動
-        Button button1 = findViewById(R.id.button1);
-        button1.setOnClickListener(new View.OnClickListener() {
+        answerButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vi.bringToFront();
+                count = 0;
+                numberCertain(Num, count);
             }
         });
 
-        Button button2 = findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
+        answerButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vi2.bringToFront();
+                count = 1;
+                numberCertain(Num, count);
+            }
+        });
+
+        answerButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                count = 2;
+                numberCertain(Num,count);
+            }
+        });
+
+        answerButton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                count = 3;
+                numberCertain(Num, count);
+            }
+        });
+
+        answerButton5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                count = 4;
+                numberCertain(Num, count);
+            }
+        });
+
+        answerButton6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                count = 5;
+                numberCertain(Num,count);
+            }
+        });
+
+        answerButton7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                count = 6;
+                numberCertain(Num, count);
+            }
+        });
+
+        answerButton8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                count = 7;
+                numberCertain(Num, count);
+            }
+        });
+
+        answerButton9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                count = 8;
+                numberCertain(Num, count);
+            }
+        });
+
+        answerButton10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                count = 9;
+                numberCertain(Num, count);
             }
         });
 
     }
+
 
     //ランダムに配列を生成するメソッド
     private int[] createRandomArray(int n, int offset){
@@ -180,7 +253,7 @@ public class Game1Activity extends AppCompatActivity {
     }
 
     //ボタンに問題をセットするメソッド
-    private void setQuizText(){
+    private int[] setQuizText(){
         int rndNum[] = createRandomArray(10, 0);
         //選択肢をセット
         answerButton1.setText(questions[0][rndNum[0]]);
@@ -194,6 +267,19 @@ public class Game1Activity extends AppCompatActivity {
         answerButton9.setText(questions[0][rndNum[8]]);
         answerButton10.setText(questions[0][rndNum[9]]);
 
+        return rndNum;
     }
 
+    private void numberCertain(int Num[], int number) {
+
+        if (Num[number] == 1) {
+            vi2.bringToFront();
+        } else if (Num[number] == 2) {
+            vi3.bringToFront();
+        } else if (Num[number] == 3) {
+            vi4.bringToFront();
+        } else if (Num[number] == 4) {
+            vi6.bringToFront();
+        }
+    }
 }
