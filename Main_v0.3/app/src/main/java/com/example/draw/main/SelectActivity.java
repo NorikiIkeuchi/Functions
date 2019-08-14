@@ -13,6 +13,8 @@ public class SelectActivity extends AppCompatActivity {
     Button tyugaku;
     Button koukou;
 
+    int nannido = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,26 +30,46 @@ public class SelectActivity extends AppCompatActivity {
     View.OnClickListener listener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            String[] items = {"一年生", "二年生", "三年生"};
+            final String[] items = {"一年生", "二年生", "三年生"};
+            final String[] items2 = {"レベル1","レベル2","レベル3","レベル4","レベル5"};
 
+            //中学生
             if(view == tyugaku){
                 new AlertDialog.Builder(SelectActivity.this).setTitle("何年生？").setItems(items, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        int nannido = 10 + which;
-                        Intent intent = new Intent(SelectActivity.this, GamestartActivity.class);
-                        intent.putExtra("難易度", nannido);
-                        startActivity(intent);
+                        nannido += 10 * (which + 1);
+
+                        new AlertDialog.Builder(SelectActivity.this).setTitle("レベルを選択してください。").setItems(items2, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                nannido += (which + 1);
+
+                                Intent intent = new Intent(SelectActivity.this, GamestartActivity.class);
+                                intent.putExtra("難易度", nannido);
+                                startActivity(intent);
+                            }
+                        }).show();
+
                     }
                 }).show();
-            }else{
+            }else{ //高校生
                 new AlertDialog.Builder(SelectActivity.this).setTitle("何年生？").setItems(items, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        int nannido = 13 + which;
-                        Intent intent = new Intent(SelectActivity.this, GamestartActivity.class);
-                        intent.putExtra("難易度", nannido);
-                        startActivity(intent);
+                        nannido += 100 + (10 * (which + 1));
+
+                        new AlertDialog.Builder(SelectActivity.this).setTitle("レベルを選択してください。").setItems(items2, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                nannido += (which + 1);
+
+                                Intent intent = new Intent(SelectActivity.this, GamestartActivity.class);
+                                intent.putExtra("難易度", nannido);
+                                startActivity(intent);
+                            }
+                        }).show();
+
                     }
                 }).show();
             }
