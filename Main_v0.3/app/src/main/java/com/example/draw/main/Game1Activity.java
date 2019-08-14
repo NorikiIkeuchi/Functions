@@ -99,11 +99,18 @@ public class Game1Activity extends AppCompatActivity {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                if(time <= 0) return;
+                if(time <= 0){
+                    //
+                    Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
+                    startActivity(intent);
+                    //intentしつづけないようにする処理
+                    time = 10000;
+                }
                 time--;
                 textTIme.setText(String.valueOf(time));
                 pb.setProgress(time);
                 handler.postDelayed(this, 1000);
+
             }
         };
 
@@ -149,6 +156,7 @@ public class Game1Activity extends AppCompatActivity {
 //                break;
 //        }
 
+        int b[];
 
         answerButton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -271,7 +279,7 @@ public class Game1Activity extends AppCompatActivity {
     }
 
     //ボタンクリックで画像を最前面に移動
-    private void numberCertain(int Num[], int number) {
+    private int[] numberCertain(int Num[], int number) {
         int array[];
         array = new int[4];
 
@@ -292,10 +300,7 @@ public class Game1Activity extends AppCompatActivity {
             time = time - 10;
         }
 
-        if(((array[0]==0)&&(array[1]==1))&&((array[2]==2)&&(array[3]==3))){
-            Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
-            startActivity(intent);
-        }
+        return array;
 
     }
 
