@@ -53,6 +53,8 @@ public class Game1Activity extends AppCompatActivity {
     private ImageView vi3;
     private ImageView vi4;
     private ImageView vi6;
+    Handler handler;
+    Runnable runnable;
 
 
     @Override
@@ -261,23 +263,23 @@ public class Game1Activity extends AppCompatActivity {
         textTIme.setText(String.valueOf(time));
         pb.setProgress(time);
 
-        final Handler handler = new Handler();
-        Runnable runnable = new Runnable() {
+        handler = new Handler();
+        runnable = new Runnable() {
             @Override
             public void run() {
-<<<<<<< HEAD
-                if(time <= 0){
-                    //
-                    Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
-                    startActivity(intent);
-                    //intentしつづけないようにする処理
-                    time = 10000;
-                }
+
+//                if(time <= 0){
+//                    //
+//                    Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
+//                    startActivity(intent);
+//                    //intentしつづけないようにする処理
+//                    time = 10000;
+//                }
                 time--;
                 textTIme.setText(String.valueOf(time));
                 pb.setProgress(time);
                 handler.postDelayed(this, 1000);
-=======
+
                 //時間切れ時に画面遷移
                 if(time <= 0) {
                     Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
@@ -285,13 +287,13 @@ public class Game1Activity extends AppCompatActivity {
                     intent.putExtra("point", time);
                     startActivity(intent);
                 }
-                else{
-                    time--;
-                    textTIme.setText(String.valueOf(time));
-                    pb.setProgress(time);
-                    handler.postDelayed(this, 1000);
-                }
->>>>>>> dd2a15eccb908530fa8b78d36aa58b89a057e9f9
+//                else{
+//                    time--;
+//                    textTIme.setText(String.valueOf(time));
+//                    pb.setProgress(time);
+//                    handler.postDelayed(this, 1000);
+//                }
+
 
             }
         };
@@ -311,7 +313,8 @@ public class Game1Activity extends AppCompatActivity {
 
         handler.post(runnable);
 
-<<<<<<< HEAD
+
+
 //        Intent intent = getIntent();
 //        int nannido = intent.getIntExtra("難易度", 0);
 //
@@ -343,9 +346,6 @@ public class Game1Activity extends AppCompatActivity {
 //                break;
 //        }
 
-        int b[];
-=======
->>>>>>> dd2a15eccb908530fa8b78d36aa58b89a057e9f9
 
         answerButton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -498,13 +498,12 @@ public class Game1Activity extends AppCompatActivity {
     }
 
     //ボタンクリックで画像を最前面に移動
-<<<<<<< HEAD
-    private int[] numberCertain(int Num[], int number) {
-        int array[];
-        array = new int[4];
-=======
+
+//    private int[] numberCertain(int Num[], int number) {
+//        int array[];
+//        array = new int[4];
+
     private void numberCertain(int Num[], int number) {
->>>>>>> dd2a15eccb908530fa8b78d36aa58b89a057e9f9
 
         if (Num[number] == 1) {
             vi2.bringToFront();
@@ -526,23 +525,19 @@ public class Game1Activity extends AppCompatActivity {
 
             //正解時にカウント
             answer_count++;
-        }
-        else if(true){
+        } else if (true) {
             time = time - 10;
         }
 
-<<<<<<< HEAD
-        return array;
-=======
+
+//        return array;
         //解答の正解数が設定した問題の正解数と一致したときに画面遷移
-        if(answer_count == NumberOfAnswer){
+        if (answer_count == NumberOfAnswer) {
             Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
             //画面遷移時に得点をResultActivity.javaのpointに渡す
             intent.putExtra("point", time);
             startActivity(intent);
+            handler.removeCallbacks(runnable);
         }
->>>>>>> dd2a15eccb908530fa8b78d36aa58b89a057e9f9
-
     }
-
 }

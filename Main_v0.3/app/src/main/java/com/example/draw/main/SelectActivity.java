@@ -53,6 +53,7 @@ public class SelectActivity extends AppCompatActivity {
 
                     }
                 }).show();
+                nannido = 0;
             }else{ //高校生
                 new AlertDialog.Builder(SelectActivity.this).setTitle("何年生？").setItems(items, new DialogInterface.OnClickListener() {
                     @Override
@@ -72,6 +73,7 @@ public class SelectActivity extends AppCompatActivity {
 
                     }
                 }).show();
+                nannido = 0;
             }
         }
     };

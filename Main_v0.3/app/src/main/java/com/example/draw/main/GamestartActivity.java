@@ -18,10 +18,11 @@ public class GamestartActivity extends AppCompatActivity {
         //SelectActivity.javaから変数nannidoを受け取り、表示
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
-            final int nannido = bundle.getInt("難易度");
+            int nannido1 = bundle.getInt("難易度");
+            final int trans = nannido1;
             TextView tv = findViewById(R.id.textView5);
 
-            switch (nannido){
+            switch (nannido1){
                 case 11:
                     tv.setText("中学一年生レベル1");
                     break;
@@ -123,7 +124,7 @@ public class GamestartActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(GamestartActivity.this, Game1Activity.class);
-                    intent.putExtra("難易度", nannido);
+                    intent.putExtra("難易度", trans);
                     startActivity(intent);
                 }
             });
