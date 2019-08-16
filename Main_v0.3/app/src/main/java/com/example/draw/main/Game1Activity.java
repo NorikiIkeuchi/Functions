@@ -286,6 +286,8 @@ public class Game1Activity extends AppCompatActivity {
                     //画面遷移時に得点をResultActivity.javaのpointに渡す
                     intent.putExtra("point", time);
                     startActivity(intent);
+                    handler.removeCallbacks(runnable);
+
                 }
 //                else{
 //                    time--;
@@ -308,6 +310,7 @@ public class Game1Activity extends AppCompatActivity {
                 //画面遷移時に得点をResultActivity.javaのpointに渡す
                 intent.putExtra("point", time);
                 startActivity(intent);
+                handler.removeCallbacks(runnable);
             }
         });
 
