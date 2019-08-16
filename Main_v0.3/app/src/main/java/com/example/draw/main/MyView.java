@@ -85,6 +85,7 @@ public class MyView extends View {
         super.onDraw(canvas);
         Paint mPaint = new Paint();
 
+
         mPaint.setStyle(Paint.Style.STROKE); // 塗りつぶし無し
 
         int width = getMeasuredWidth();
