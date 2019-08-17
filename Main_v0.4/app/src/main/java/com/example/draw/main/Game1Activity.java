@@ -547,6 +547,36 @@ public class Game1Activity extends AppCompatActivity {
 
             //正解時にカウント
             answer_count++;
+        } else if (Num[number] == 5) {
+            drawYGraphView(graph, -2, 2, 0, 0, 0, -3, Color.RED);
+
+            //間違い
+            time = time - 10;
+        } else if (Num[number] == 6) {
+            drawXGraphView(graph, -2, 2, 0, 0, 0, 3, Color.RED);
+
+            //間違い
+            time = time - 10;
+        } else if (Num[number] == 7) {
+            drawYGraphView(graph, -2, 2, 0, 0, 0, -3, Color.RED);
+
+            //間違い
+            time = time - 10;
+        } else if (Num[number] == 8) {
+            drawXGraphView(graph, -2, 2, 0, 0, 0, -3, Color.RED);
+
+            //間違い
+            time = time - 10;
+        } else if (Num[number] == 9) {
+            drawYGraphView(graph, -2, 2, 0, 0, 0, -4, Color.RED);
+
+            //間違い
+            time = time - 10;
+        } else if (Num[number] == 10) {
+            drawXGraphView(graph, -2, 2, 0, 0, 0, 4, Color.RED);
+
+            //間違い
+            time = time - 10;
         } else if (true) {
             time = time - 10;
         }
