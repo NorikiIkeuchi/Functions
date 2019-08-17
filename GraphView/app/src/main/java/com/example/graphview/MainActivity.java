@@ -2,6 +2,7 @@ package com.example.graphview;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
@@ -18,8 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
         GraphView graph = (GraphView) findViewById(R.id.graph1);
         startGraphView(graph);
-        drawYGraphView(graph, -10, 10, 0.0, 0.2, 0.0, 0.0);
-        drawXGraphView(graph, -5, 3, 0.0, 0.0, 0.0, 2.0);
+        drawYGraphView(graph, -10, 10, 0.0, 0.2, 0.0, 0.0, Color.RED);
+        drawXGraphView(graph, -5, 3, 0.0, 0.0, 0.0, 2.0, Color.GRAY);
+        drawXGraphView(graph, -5, 3, 0.0, 0.0, 0.0, 2.0, Color.BLUE);
     }
 
     private void startGraphView(GraphView graph){
@@ -37,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
     //関数のパラメータを渡してY=なんちゃらのグラフを描画する(とりあえず3次関数まで 例:y=ax^3+bx^2+c^x+d)
     //int gminは表示させるグラフの最小 , int gmaxは表示させるグラフの最大の範囲を渡す
-    private void drawYGraphView(GraphView graph, int gmin, int gmax, double a, double b, double c, double d){
+    //int colorは線の色(例：赤=Color.RED, 青=Color.BLUE, 灰色=Color.GRAY, 黒=Color.BLACK)
+    private void drawYGraphView(GraphView graph, int gmin, int gmax, double a, double b, double c, double d, int color){
         double x;
         double y;
 
@@ -46,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
             series = new PointsGraphSeries<>();
             //線の太さ
             series.setSize(3.0f);
+            //線の色
+            series.setColor(color);
 
             //やりたい関数かいて;
             y = a * x * x * x + b * x * x + c * x + d;
@@ -60,7 +65,8 @@ public class MainActivity extends AppCompatActivity {
 
     //関数のパラメータを渡してX=なんちゃらのグラフを描画する(とりあえず3次関数まで 例:x=ay^3+by^2+c^y+d)
     //int gminは表示させるグラフの最小 , int gmaxは表示させるグラフの最大の範囲を渡す
-    private void drawXGraphView(GraphView graph, int gmin, int gmax, double a, double b, double c, double d){
+    //int colorは線の色(例：赤=Color.RED, 青=Color.BLUE, 灰色=Color.GRAY, 黒=Color.BLACK)
+    private void drawXGraphView(GraphView graph, int gmin, int gmax, double a, double b, double c, double d, int color){
         double x;
         double y;
 
@@ -69,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
             series = new PointsGraphSeries<>();
             //線の太さ
             series.setSize(3.0f);
+            //線の色
+            series.setColor(color);
 
             //やりたい関数かいて;
             x = a * y * y * y + b * y * y + c * y + d;
