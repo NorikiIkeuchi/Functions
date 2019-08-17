@@ -1,5 +1,6 @@
 package com.example.draw.main;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -23,11 +24,11 @@ public class ResultActivity extends AppCompatActivity {
             scoreText.setText(String.format("%d", point));
         }
 
-        Button button = findViewById(R.id.buttonBack);
+        Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ResultActivity.this, SelectActivity.class);
+                Intent intent = new Intent(ResultActivity.this, RankingActivity.class);
                 startActivity(intent);
             }
         });
