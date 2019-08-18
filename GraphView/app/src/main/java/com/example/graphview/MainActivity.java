@@ -19,9 +19,19 @@ public class MainActivity extends AppCompatActivity {
 
         GraphView graph = (GraphView) findViewById(R.id.graph1);
         startGraphView(graph);
-        drawYGraphView(graph, -10, 10, 0.0, 0.2, 0.0, 0.0, Color.RED);
-        drawXGraphView(graph, -5, 3, 0.0, 0.0, 0.0, 2.0, Color.GRAY);
-        drawXGraphView(graph, -5, 3, 0.0, 0.0, 0.0, 2.0, Color.BLUE);
+        drawYGraphView(graph, -4, 4, 0.0, 0.0, 0.0, -6, Color.BLACK);
+        drawYGraphView(graph, -4, 4, 0.0, 0.0, 0, 6, Color.BLACK);
+        drawXGraphView(graph, -6, 0, 0.0, 0.0, 0.0, 4, Color.BLACK);
+        drawXGraphView(graph, -6, 0, 0.0, 0.0, 0.0, -4, Color.BLACK);
+        drawYGraphView(graph, -6, -4, 0.0, 0.0, 1, 4, Color.BLACK);
+        drawYGraphView(graph, 4, 6, 0.0, 0.0, -1, 4, Color.BLACK);
+        drawYGraphView(graph, 6, 8, 0.0, 0.0, 2, -14, Color.BLACK);
+        drawYGraphView(graph, -8, -6, 0.0, 0.0, -2, -14, Color.BLACK);
+        drawYGraphView(graph, -8, -4, 0.0, 0.0, 1, 10, Color.BLACK);
+        drawYGraphView(graph, 4, 8, 0.0, 0.0, -1, 10, Color.BLACK);
+        drawYGraphView(graph, -2, 2, 0.0, 0.5, 0, 4, Color.BLACK);
+//        drawXGraphView(graph, -5, 3, 0.0, 0.0, 0.0, 2.0, Color.GRAY);
+//        drawXGraphView(graph, -5, 3, 0.0, 0.0, 0.0, 2.0, Color.BLUE);
     }
 
     private void startGraphView(GraphView graph){
