@@ -99,10 +99,10 @@ public class Game1Activity extends AppCompatActivity {
                     NumberOfAnswer = 4;
                     NumberOfSection = 0;
                     //例題
-                    drawXGraphView(graph, -2, 2, 0, 0, 0, 2, Color.GRAY);
-                    drawXGraphView(graph, -2, 2, 0, 0, 0, -2, Color.GRAY);
-                    drawYGraphView(graph, -2, 2, 0, 0, 0, 2, Color.GRAY);
-                    drawYGraphView(graph, -2, 2, 0, 0, 0, -2, Color.GRAY);
+                    drawXGraphView(graph, -2, 2, 0, 0, 0, 2, Color.BLACK);
+                    drawXGraphView(graph, -2, 2, 0, 0, 0, -2, Color.BLACK);
+                    drawYGraphView(graph, -2, 2, 0, 0, 0, 2, Color.BLACK);
+                    drawYGraphView(graph, -2, 2, 0, 0, 0, -2, Color.BLACK);
                     break;
                 case 12:
                     //中学一年生レベル2
@@ -315,19 +315,19 @@ public class Game1Activity extends AppCompatActivity {
             }
         };
 
-        Button button = findViewById(R.id.buttonResult);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //終了ボタンを押した時にtimeを0に設定
-                time = 0;
-                Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
-                //画面遷移時に得点をResultActivity.javaのpointに渡す
-                intent.putExtra("point", time);
-                startActivity(intent);
-                handler.removeCallbacks(runnable);
-            }
-        });
+//        Button button = findViewById(R.id.buttonResult);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //終了ボタンを押した時にtimeを0に設定
+//                time = 0;
+//                Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
+//                //画面遷移時に得点をResultActivity.javaのpointに渡す
+//                intent.putExtra("point", time);
+//                startActivity(intent);
+//                handler.removeCallbacks(runnable);
+//            }
+//        });
 
         handler.post(runnable);
 
