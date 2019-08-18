@@ -68,6 +68,7 @@ public class Game1Activity extends AppCompatActivity {
         setContentView(R.layout.activity_game1);
 
         GraphView graph = (GraphView) findViewById(R.id.graph1);
+
         //グラフの軸表示
         startGraphView(graph);
 
@@ -594,6 +595,9 @@ public class Game1Activity extends AppCompatActivity {
     }
 
     private void startGraphView(GraphView graph){
+        graph.getGridLabelRenderer().setGridColor(Color.parseColor("#ffffff"));
+        graph.getGridLabelRenderer().setVerticalLabelsColor(Color.parseColor("#ffffff"));
+        graph.getGridLabelRenderer().setHorizontalLabelsColor(Color.parseColor("#ffffff"));
         graph.getViewport().setYAxisBoundsManual(true);
         graph.getViewport().setMinX(-10);
         graph.getViewport().setMaxX(10);
