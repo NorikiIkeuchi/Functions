@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class RankingActivity extends AppCompatActivity {
 
     @Override
@@ -24,5 +27,18 @@ public class RankingActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void SaveTerminal() {
+        String userId = "TARMINAL";
+        String userName = "ターミナル";
+        Double time = 99999.9;
+        String date = "1999-01-01 00:00:00";
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference ref = database.getReference("info");
+
+        StartActivity.User user = new StartActivity.User(userName, time, date, userId);
+        ref.child(userId).setValue(user);
     }
 }

@@ -28,7 +28,8 @@ import com.jjoe64.graphview.series.PointsGraphSeries;
 
 import au.com.bytecode.opencsv.CSVReader;
 
-public class Game1Activity extends AppCompatActivity {
+public class
+Game1Activity extends AppCompatActivity {
     PointsGraphSeries<DataPoint> series;
     //csvファイルの問題数
     private int NumberOfQuestions = 30;
@@ -97,11 +98,22 @@ public class Game1Activity extends AppCompatActivity {
                     //中学一年生レベル1
                     NumberOfAnswer = 4;
                     NumberOfSection = 0;
+                    drawYGraphView(graph, -4, 4, 0.0, 0.0, 0.0, -6, Color.GRAY);
+                    drawYGraphView(graph, -4, 4, 0.0, 0.0, 0, 6, Color.GRAY);
+                    drawXGraphView(graph, -6, 0, 0.0, 0.0, 0.0, 4, Color.GRAY);
+                    drawXGraphView(graph, -6, 0, 0.0, 0.0, 0.0, -4, Color.GRAY);
+                    drawYGraphView(graph, -6, -4, 0.0, 0.0, 1, 4, Color.GRAY);
+                    drawYGraphView(graph, 4, 6, 0.0, 0.0, -1, 4, Color.GRAY);
+                    drawYGraphView(graph, 6, 8, 0.0, 0.0, 2, -14, Color.GRAY);
+                    drawYGraphView(graph, -8, -6, 0.0, 0.0, -2, -14, Color.GRAY);
+                    drawYGraphView(graph, -8, -4, 0.0, 0.0, 1, 10, Color.GRAY);
+                    drawYGraphView(graph, 4, 8, 0.0, 0.0, -1, 10, Color.GRAY);
+                    drawYGraphView(graph, -2, 2, 0.0, 0.5, 0, 4, Color.GRAY);
                     //例題
-                    drawXGraphView(graph, -2, 2, 0, 0, 0, 2, Color.GRAY);
-                    drawXGraphView(graph, -2, 2, 0, 0, 0, -2, Color.GRAY);
-                    drawYGraphView(graph, -2, 2, 0, 0, 0, 2, Color.GRAY);
-                    drawYGraphView(graph, -2, 2, 0, 0, 0, -2, Color.GRAY);
+//                    drawXGraphView(graph, -2, 2, 0, 0, 0, 2, Color.GRAY);
+//                    drawXGraphView(graph, -2, 2, 0, 0, 0, -2, Color.GRAY);
+//                    drawYGraphView(graph, -2, 2, 0, 0, 0, 2, Color.GRAY);
+//                    drawYGraphView(graph, -2, 2, 0, 0, 0, -2, Color.GRAY);
                     break;
                 case 12:
                     //中学一年生レベル2
@@ -273,7 +285,7 @@ public class Game1Activity extends AppCompatActivity {
 
         textTIme = findViewById(R.id.textTime);
         pb = findViewById(R.id.progressBar);
-        time = 100;
+        time = 106;
         textTIme.setText(String.valueOf(time));
         pb.setProgress(time);
 
@@ -314,19 +326,19 @@ public class Game1Activity extends AppCompatActivity {
             }
         };
 
-        Button button = findViewById(R.id.buttonResult);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //終了ボタンを押した時にtimeを0に設定
-                time = 0;
-                Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
-                //画面遷移時に得点をResultActivity.javaのpointに渡す
-                intent.putExtra("point", time);
-                startActivity(intent);
-                handler.removeCallbacks(runnable);
-            }
-        });
+//        Button button = findViewById(R.id.buttonResult);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //終了ボタンを押した時にtimeを0に設定
+//                time = 0;
+//                Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
+//                //画面遷移時に得点をResultActivity.javaのpointに渡す
+//                intent.putExtra("point", time);
+//                startActivity(intent);
+//                handler.removeCallbacks(runnable);
+//            }
+//        });
 
         handler.post(runnable);
 
@@ -525,45 +537,56 @@ public class Game1Activity extends AppCompatActivity {
 
         if (Num[number] == 1) {
 //            vi2.bringToFront();
-            drawYGraphView(graph, -2, 2, 0, 0, 0, 2, Color.BLUE);
+//            drawYGraphView(graph, -2, 2, 0, 0, 0, 2, Color.BLUE);
+            drawYGraphView(graph, -4, 4, 0.0, 0.0, 0.0, -6, Color.BLUE);
+            drawYGraphView(graph, -8, -6, 0.0, 0.0, -2, -14, Color.BLUE);
 
             //正解時にカウント
             answer_count++;
         } else if (Num[number] == 2) {
 //            vi3.bringToFront();
-            drawXGraphView(graph, -2, 2, 0, 0, 0, -2, Color.BLUE);
+//            drawXGraphView(graph, -2, 2, 0, 0, 0, -2, Color.BLUE);
+            drawYGraphView(graph, -4, 4, 0.0, 0.0, 0, 6, Color.BLUE);
+            drawYGraphView(graph, -8, -4, 0.0, 0.0, 1, 10, Color.BLUE);
 
             //正解時にカウント
             answer_count++;
         } else if (Num[number] == 3) {
 //            vi4.bringToFront();
-            drawYGraphView(graph, -2, 2, 0, 0, 0, -2, Color.BLUE);
+//            drawYGraphView(graph, -2, 2, 0, 0, 0, -2, Color.BLUE);
+            drawYGraphView(graph, -4, 4, 0.0, 0.0, 0.0, -6, Color.BLUE);
+            drawYGraphView(graph, 4, 8, 0.0, 0.0, -1, 10, Color.BLUE);
 
             //正解時にカウント
             answer_count++;
         } else if (Num[number] == 4) {
 //            vi6.bringToFront();
-            drawXGraphView(graph, -2, 2, 0, 0, 0, 2, Color.BLUE);
+//            drawXGraphView(graph, -2, 2, 0, 0, 0, 2, Color.BLUE);
+            drawXGraphView(graph, -6, 0, 0.0, 0.0, 0.0, 4, Color.BLUE);
+            drawYGraphView(graph, -2, 2, 0.0, 0.5, 0, 4, Color.BLUE);
 
             //正解時にカウント
             answer_count++;
         } else if (Num[number] == 5) {
-            drawYGraphView(graph, -2, 2, 0, 0, 0, -3, Color.RED);
+//            drawYGraphView(graph, -2, 2, 0, 0, 0, -3, Color.RED);
+            drawYGraphView(graph, -6, -4, 0.0, 0.0, 1, 4, Color.BLUE);
 
             //間違い
             time = time - 10;
         } else if (Num[number] == 6) {
-            drawXGraphView(graph, -2, 2, 0, 0, 0, 3, Color.RED);
+//            drawXGraphView(graph, -2, 2, 0, 0, 0, 3, Color.RED);
+            drawYGraphView(graph, 4, 6, 0.0, 0.0, -1, 4, Color.BLUE);
 
             //間違い
             time = time - 10;
         } else if (Num[number] == 7) {
-            drawYGraphView(graph, -2, 2, 0, 0, 0, -3, Color.RED);
-
+//            drawYGraphView(graph, -2, 2, 0, 0, 0, -3, Color.RED);
+            drawYGraphView(graph, 6, 8, 0.0, 0.0, 2, -14, Color.BLUE);
             //間違い
             time = time - 10;
         } else if (Num[number] == 8) {
-            drawXGraphView(graph, -2, 2, 0, 0, 0, -3, Color.RED);
+//            drawXGraphView(graph, -2, 2, 0, 0, 0, -3, Color.RED);
+            drawYGraphView(graph, -8, -6, 0.0, 0.0, -2, -14, Color.BLUE);
 
             //間違い
             time = time - 10;
@@ -584,13 +607,13 @@ public class Game1Activity extends AppCompatActivity {
 
 //        return array;
         //解答の正解数が設定した問題の正解数と一致したときに画面遷移
-        if (answer_count == NumberOfAnswer) {
-            Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
-            //画面遷移時に得点をResultActivity.javaのpointに渡す
-            intent.putExtra("point", time);
-            startActivity(intent);
-            handler.removeCallbacks(runnable);
-        }
+//        if (answer_count == NumberOfAnswer) {
+//            Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
+//            //画面遷移時に得点をResultActivity.javaのpointに渡す
+//            intent.putExtra("point", time);
+//            startActivity(intent);
+//            handler.removeCallbacks(runnable);
+//        }
     }
 
     private void startGraphView(GraphView graph){

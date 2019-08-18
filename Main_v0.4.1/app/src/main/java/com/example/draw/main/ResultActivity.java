@@ -3,11 +3,15 @@ package com.example.draw.main;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -45,5 +49,8 @@ public class ResultActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 }
+

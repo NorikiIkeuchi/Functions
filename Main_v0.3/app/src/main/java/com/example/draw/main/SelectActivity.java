@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SelectActivity extends AppCompatActivity {
     Button tyugaku;
     Button koukou;
+    Button tyuto;
 
     int nannido = 0;
 
@@ -22,9 +23,11 @@ public class SelectActivity extends AppCompatActivity {
 
         tyugaku = findViewById(R.id.buttonTyugaku);
         koukou = findViewById(R.id.buttonKoukou);
+        tyuto = findViewById(R.id.buttonTyuto);
 
         tyugaku.setOnClickListener(listener);
         koukou.setOnClickListener(listener);
+        tyuto.setOnClickListener(listener);
     }
 
     View.OnClickListener listener = new View.OnClickListener() {
@@ -54,7 +57,8 @@ public class SelectActivity extends AppCompatActivity {
                     }
                 }).show();
                 nannido = 0;
-            }else{ //高校生
+            }
+            else if(view == koukou){ //高校生
                 new AlertDialog.Builder(SelectActivity.this).setTitle("何年生？").setItems(items, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -74,6 +78,10 @@ public class SelectActivity extends AppCompatActivity {
                     }
                 }).show();
                 nannido = 0;
+            }
+            else if(view == tyuto){
+                Intent intent = new Intent(SelectActivity.this, TyutoActivity.class);
+                startActivity(intent);
             }
         }
     };
