@@ -24,6 +24,10 @@ public class ResultActivity extends AppCompatActivity {
         Typeface customFont = Typeface.createFromAsset(getAssets(), "TanukiMagic.ttf");
         myText.setTypeface(customFont);
 
+        TextView myText4 = findViewById(R.id.textView_R2);
+        Typeface customFont4 = Typeface.createFromAsset(getAssets(), "TanukiMagic.ttf");
+        myText4.setTypeface(customFont4);
+
         TextView myText2 = findViewById(R.id.buttonBack);
         Typeface customFont2 = Typeface.createFromAsset(getAssets(), "TanukiMagic.ttf");
         myText2.setTypeface(customFont2);
