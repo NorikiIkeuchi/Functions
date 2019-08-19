@@ -61,8 +61,8 @@ public class Game1Activity extends AppCompatActivity {
 //    private String b[] = new String[2];
 //    private String c[] = new String[2];
 //    private String d[] = new String[2];
-    private int suuji[][] = new int[10][6];
-    private int suuji2[] = new int[6];
+    private double suuji[][] = new double[11][6];
+    private double suuji2[] = new double[6];
     //    private ImageView vi;
 //    private ImageView vi2;
 //    private ImageView vi3;
@@ -77,27 +77,22 @@ public class Game1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game1);
 
-        GraphView graph = (GraphView) findViewById(R.id.graph1);
+        GraphView graph = findViewById(R.id.graph1);
 
         //グラフの軸表示
         startGraphView(graph);
 
         // ビューの初期化
-        answerButton1 = (Button) findViewById(R.id.button1);
-        answerButton2 = (Button) findViewById(R.id.button2);
-        answerButton3 = (Button) findViewById(R.id.button3);
-        answerButton4 = (Button) findViewById(R.id.button4);
-        answerButton5 = (Button) findViewById(R.id.button5);
-        answerButton6 = (Button) findViewById(R.id.button6);
-        answerButton7 = (Button) findViewById(R.id.button7);
-        answerButton8 = (Button) findViewById(R.id.button8);
-        answerButton9 = (Button) findViewById(R.id.button9);
-        answerButton10 = (Button) findViewById(R.id.button10);
-//        vi = findViewById(R.id.imageView);
-//        vi2 = findViewById(R.id.imageView2);
-//        vi3 = findViewById(R.id.imageView3);
-//        vi4 = findViewById(R.id.imageView4);
-//        vi6 = findViewById(R.id.imageView6);
+        answerButton1 =  findViewById(R.id.button1);
+        answerButton2 =  findViewById(R.id.button2);
+        answerButton3 =  findViewById(R.id.button3);
+        answerButton4 =  findViewById(R.id.button4);
+        answerButton5 =  findViewById(R.id.button5);
+        answerButton6 =  findViewById(R.id.button6);
+        answerButton7 =  findViewById(R.id.button7);
+        answerButton8 =  findViewById(R.id.button8);
+        answerButton9 =  findViewById(R.id.button9);
+        answerButton10 = findViewById(R.id.button10);
 
         //GamestartActivity.javaから受け取った変数nannidoから問題の正解数と、quiz_data.csvからの問題選択を行う配列questions[]に使用する変数NumberOfQuestionの設定を行う
         Bundle bundle = getIntent().getExtras();
@@ -288,11 +283,10 @@ public class Game1Activity extends AppCompatActivity {
             xvalueGet(str);
             suuji2 = strChange(buff);
             for(int j=0; j< 6; j++){
+                //二次元配列に係数を格納している
                 suuji[i][j] = suuji2[j];
             }
-//            buff = null;
             judge = null;
-//            ybuff = "0,0,0,";
         }
 
 
@@ -310,13 +304,6 @@ public class Game1Activity extends AppCompatActivity {
             @Override
             public void run() {
 
-//                if(time <= 0){
-//                    //
-//                    Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
-//                    startActivity(intent);
-//                    //intentしつづけないようにする処理
-//                    time = 10000;
-//                }
                 time--;
                 textTIme.setText(String.valueOf(time));
                 pb.setProgress(time);
@@ -331,65 +318,10 @@ public class Game1Activity extends AppCompatActivity {
                     handler.removeCallbacks(runnable);
 
                 }
-//                else{
-//                    time--;
-//                    textTIme.setText(String.valueOf(time));
-//                    pb.setProgress(time);
-//                    handler.postDelayed(this, 1000);
-//                }
-
-
             }
         };
 
-//        Button button = findViewById(R.id.buttonResult);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //終了ボタンを押した時にtimeを0に設定
-//                time = 0;
-//                Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
-//                //画面遷移時に得点をResultActivity.javaのpointに渡す
-//                intent.putExtra("point", time);
-//                startActivity(intent);
-//                handler.removeCallbacks(runnable);
-//            }
-//        });
-
         handler.post(runnable);
-
-
-
-//        Intent intent = getIntent();
-//        int nannido = intent.getIntExtra("難易度", 0);
-//
-//        TextView tv = findViewById(R.id.textView);
-//
-//
-//        switch (nannido){
-//            case 10:
-//                tv.setText("中学一年生");
-//
-//                break;
-//            case 11:
-//                tv.setText("中学二年生");
-//                break;
-//            case 12:
-//                tv.setText("中学三年生");
-//                break;
-//            case 13:
-//                tv.setText("高校一年生");
-//                break;
-//            case 14:
-//                tv.setText("高校二年生");
-//                break;
-//            case 15:
-//                tv.setText("高校三年生");
-//                break;
-//            default:
-//                tv.setText("不正");
-//                break;
-//        }
 
 
         answerButton1.setOnClickListener(new View.OnClickListener() {
@@ -543,66 +475,60 @@ public class Game1Activity extends AppCompatActivity {
         return rndNum;
     }
 
-    //ボタンクリックで画像を最前面に移動
-
-//    private int[] numberCertain(int Num[], int number) {
-//        int array[];
-//        array = new int[4];
-
+    //クリックしたボタンに応じた関数をグラフにプロット
     private void numberCertain(int Num[], int number) {
-        GraphView graph = (GraphView) findViewById(R.id.graph1);
+        GraphView graph = findViewById(R.id.graph1);
 
         if (Num[number] == 1) {
-//            vi2.bringToFront();
-            drawYGraphView(graph, -2, 2, 0, 0, 0, 2, Color.BLUE);
+
+            drawYGraphView(graph, (int)suuji[1][4], (int)suuji[1][5], suuji[1][0], suuji[1][1], suuji[1][2], suuji[1][3], Color.BLUE);
 
             //正解時にカウント
             answer_count++;
         } else if (Num[number] == 2) {
-//            vi3.bringToFront();
-            drawXGraphView(graph, -2, 2, 0, 0, 0, -2, Color.BLUE);
+
+            drawXGraphView(graph, (int)suuji[2][4], (int)suuji[2][5], suuji[2][0], suuji[2][1], suuji[2][2], suuji[2][3], Color.BLUE);
 
             //正解時にカウント
             answer_count++;
         } else if (Num[number] == 3) {
-//            vi4.bringToFront();
-            drawYGraphView(graph, -2, 2, 0, 0, 0, -2, Color.BLUE);
+
+            drawYGraphView(graph, (int)suuji[3][4], (int)suuji[3][5], suuji[3][0], suuji[3][1], suuji[3][2], suuji[3][3], Color.BLUE);
 
             //正解時にカウント
             answer_count++;
         } else if (Num[number] == 4) {
-//            vi6.bringToFront();
-            drawXGraphView(graph, -2, 2, 0, 0, 0, 2, Color.BLUE);
 
+            drawXGraphView(graph, (int)suuji[4][4], (int)suuji[4][5], suuji[4][0], suuji[4][1], suuji[4][2], suuji[4][3], Color.BLUE);
             //正解時にカウント
             answer_count++;
         } else if (Num[number] == 5) {
-            drawYGraphView(graph, -2, 2, 0, 0, 0, -3, Color.RED);
+            drawYGraphView(graph, (int)suuji[5][4], (int)suuji[5][5], suuji[5][0], suuji[5][1], suuji[5][2], suuji[5][3], Color.RED);
 
             //間違い
             time = time - 10;
         } else if (Num[number] == 6) {
-            drawXGraphView(graph, -2, 2, 0, 0, 0, 3, Color.RED);
+            drawXGraphView(graph, (int)suuji[6][4], (int)suuji[6][5], suuji[6][0], suuji[6][1], suuji[6][2], suuji[6][3], Color.RED);
 
             //間違い
             time = time - 10;
         } else if (Num[number] == 7) {
-            drawYGraphView(graph, -2, 2, 0, 0, 0, -3, Color.RED);
+            drawYGraphView(graph, (int)suuji[7][4], (int)suuji[7][5], suuji[7][0], suuji[7][1], suuji[7][2], suuji[7][3], Color.RED);
 
             //間違い
             time = time - 10;
         } else if (Num[number] == 8) {
-            drawXGraphView(graph, -2, 2, 0, 0, 0, -3, Color.RED);
+            drawXGraphView(graph, (int)suuji[8][4], (int)suuji[8][5], suuji[8][0], suuji[8][1], suuji[8][2], suuji[8][3], Color.RED);
 
             //間違い
             time = time - 10;
         } else if (Num[number] == 9) {
-            drawYGraphView(graph, -2, 2, 0, 0, 0, -4, Color.RED);
+            drawYGraphView(graph, (int)suuji[9][4], (int)suuji[9][5], suuji[9][0], suuji[9][1], suuji[9][2], suuji[9][3], Color.RED);
 
             //間違い
             time = time - 10;
         } else if (Num[number] == 10) {
-            drawXGraphView(graph, -2, 2, 0, 0, 0, 4, Color.RED);
+            drawXGraphView(graph, (int)suuji[10][4], (int)suuji[10][5], suuji[10][0], suuji[10][1], suuji[10][2], suuji[10][3], Color.RED);
 
             //間違い
             time = time - 10;
@@ -756,15 +682,15 @@ public class Game1Activity extends AppCompatActivity {
     }
 
     //文字列から係数を数字にするメソッド
-    private int[] strChange(String buf){
-        int result[] = new int[6];
+    private double[] strChange(String buf){
+        double result[] = new double[6];
         String a[] = buf.split(",",6);
         for(int i=0;i<6;i++){
             if(a[i].isEmpty()){
                 result[i] = 1;
             }
             else{
-                result[i] = Integer.parseInt(a[i]);
+                result[i] = Double.parseDouble(a[i]);
             }
         }
         return result;
