@@ -53,6 +53,16 @@ public class Game1Activity extends AppCompatActivity {
     int time;
     int count;
     int answer_count = 0;
+    private String str;
+    String judge;
+    //関数の係数が順番に入っている（,の前が空欄の場合だけ係数が1）
+    private String buff;
+//    private String ybuff = "0,0,0,";
+//    private String b[] = new String[2];
+//    private String c[] = new String[2];
+//    private String d[] = new String[2];
+    private int suuji[][] = new int[10][6];
+    private int suuji2[] = new int[6];
     //    private ImageView vi;
 //    private ImageView vi2;
 //    private ImageView vi3;
@@ -98,6 +108,7 @@ public class Game1Activity extends AppCompatActivity {
                     //中学一年生レベル1
                     NumberOfAnswer = 4;
                     NumberOfSection = 0;
+
                     //例題
                     drawXGraphView(graph, -2, 2, 0, 0, 0, 2, Color.BLACK);
                     drawXGraphView(graph, -2, 2, 0, 0, 0, -2, Color.BLACK);
@@ -264,10 +275,26 @@ public class Game1Activity extends AppCompatActivity {
 
             for (int i = 0; i < NumberOfQuestions; i++) {
                 questions[i] = reader.readNext();
+
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        //csvファイルから係数の取得
+        for (int i = 1; i < 10; i++) {
+            str = questions[NumberOfSection][i];
+            xvalueGet(str);
+            suuji2 = strChange(buff);
+            for(int j=0; j< 6; j++){
+                suuji[i][j] = suuji2[j];
+            }
+//            buff = null;
+            judge = null;
+//            ybuff = "0,0,0,";
+        }
+
 
         // 問題をボタンのラベルとして表示
         final int Num[] = setQuizText(NumberOfSection);
@@ -512,6 +539,7 @@ public class Game1Activity extends AppCompatActivity {
         answerButton9.setText(questions[NumberOfSection][rndNum[8]]);
         answerButton10.setText(questions[NumberOfSection][rndNum[9]]);
 
+
         return rndNum;
     }
 
@@ -659,6 +687,114 @@ public class Game1Activity extends AppCompatActivity {
             graph.addSeries(series);
 
         }
-
     }
+
+    //csvからx^3の係数を取得するメソッド(valueに数式を入れるとbuffに各係数の値が格納される)
+    private void xvalueGet(String value){
+
+        String a[] = value.split("=");
+        //x=から始まる関数の場合
+//        if(a[0].equals("x")){
+//            yvalueGet(a[1]);
+//            buff = ybuff;
+//        }
+//        else {
+        judge = a[0];
+        if(judge.equals("y")){
+            judge = "x";
+        }
+        else{
+            judge = "y";
+        }
+
+        int result = a[1].indexOf(judge + "^3+");
+        if (result != -1) {
+
+            a[1] = a[1].replace(judge + "^3+", ",");
+            buff = a[1].substring(0, result + 1);
+            String b[] = a[1].split(",");
+            xvalueGet1(b[1]);
+            //            suuji2[0] = Integer.parseInt(b[0]);
+        } else {
+            buff = "0,";
+            xvalueGet1(a[1]);
+        }
+    }
+
+    //csvからx^2の係数を取得するメソッド
+    private void xvalueGet1(String b) {
+        int result = b.indexOf(judge + "^2");
+        if(result != -1){
+            b = b.replace(judge + "^2+",",");
+            buff = buff + b.substring(0,result+1);
+            String c[] = b.split(",");
+            xvalueGet2(c[1]);
+//            suuji2[1] = Integer.parseInt(c[0]);
+        }
+        else{
+            buff = buff + "0,";
+            xvalueGet2(b);
+        }
+    }
+
+    //csvからxの係数を取得するメソッド
+    private void xvalueGet2(String c) {
+        int result = c.indexOf(judge + "+");
+        if(result != -1){
+            c = c.replace(judge + "+",",");
+            buff = buff + c.substring(0,result+1);
+            String d[] = c.split(",");
+            xvalueGet3(d[1]);
+//            suuji2[2] = Integer.parseInt(d[0]);
+        }
+        else{
+            buff = buff + "0,";
+            xvalueGet3(c);
+        }
+    }
+
+    //csvから切片と範囲の値を取得するメソッド、(2x+8 (2<x<4))のように空白で判断
+    private void xvalueGet3(String d) {
+        int result = d.indexOf("[");
+        int result1 = d.length();
+        String e = d.substring(0,result);
+        buff = buff + e + ",";
+        String e1 = d.substring(result+1,result1-1);
+//        suuji2[3] = Integer.parseInt(e);
+        e1 = e1.replace("<" + judge + "<",",");
+//        suuji2[4] = Integer.parseInt(f[0]);
+//        suuji2[5] = Integer.parseInt(f[1]);
+        buff = buff + e1;
+    }
+
+    //文字列から係数を数字にするメソッド
+    private int[] strChange(String buf){
+        int result[] = new int[6];
+        String a[] = buf.split(",",6);
+        for(int i=0;i<6;i++){
+            if(a[i].isEmpty()){
+                result[i] = 1;
+            }
+            else{
+                result[i] = Integer.parseInt(a[i]);
+            }
+        }
+        return result;
+    }
+
+    //x=~のときの係数を取得するメソッド
+//    private void yvalueGet(String str){
+//        int result = str.indexOf("[");
+//        int result1 = str.length();
+//        String e = str.substring(0,result);
+//        ybuff = ybuff + e + ",";
+//        String e1 = str.substring(result+1,result1-1);
+////        suuji2[3] = Integer.parseInt(e);
+//        e1 = e1.replace("<y<",",");
+////        suuji2[4] = Integer.parseInt(f[0]);
+////        suuji2[5] = Integer.parseInt(f[1]);
+//        ybuff = ybuff + e1;
+//    }
+
+
 }
