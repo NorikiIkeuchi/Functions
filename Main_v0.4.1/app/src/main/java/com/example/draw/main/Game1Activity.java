@@ -693,12 +693,6 @@ public class Game1Activity extends AppCompatActivity {
     private void xvalueGet(String value){
 
         String a[] = value.split("=");
-        //x=から始まる関数の場合
-//        if(a[0].equals("x")){
-//            yvalueGet(a[1]);
-//            buff = ybuff;
-//        }
-//        else {
         judge = a[0];
         if(judge.equals("y")){
             judge = "x";
@@ -714,7 +708,6 @@ public class Game1Activity extends AppCompatActivity {
             buff = a[1].substring(0, result + 1);
             String b[] = a[1].split(",");
             xvalueGet1(b[1]);
-            //            suuji2[0] = Integer.parseInt(b[0]);
         } else {
             buff = "0,";
             xvalueGet1(a[1]);
@@ -729,7 +722,6 @@ public class Game1Activity extends AppCompatActivity {
             buff = buff + b.substring(0,result+1);
             String c[] = b.split(",");
             xvalueGet2(c[1]);
-//            suuji2[1] = Integer.parseInt(c[0]);
         }
         else{
             buff = buff + "0,";
@@ -745,7 +737,6 @@ public class Game1Activity extends AppCompatActivity {
             buff = buff + c.substring(0,result+1);
             String d[] = c.split(",");
             xvalueGet3(d[1]);
-//            suuji2[2] = Integer.parseInt(d[0]);
         }
         else{
             buff = buff + "0,";
@@ -760,10 +751,7 @@ public class Game1Activity extends AppCompatActivity {
         String e = d.substring(0,result);
         buff = buff + e + ",";
         String e1 = d.substring(result+1,result1-1);
-//        suuji2[3] = Integer.parseInt(e);
         e1 = e1.replace("<" + judge + "<",",");
-//        suuji2[4] = Integer.parseInt(f[0]);
-//        suuji2[5] = Integer.parseInt(f[1]);
         buff = buff + e1;
     }
 
@@ -781,20 +769,5 @@ public class Game1Activity extends AppCompatActivity {
         }
         return result;
     }
-
-    //x=~のときの係数を取得するメソッド
-//    private void yvalueGet(String str){
-//        int result = str.indexOf("[");
-//        int result1 = str.length();
-//        String e = str.substring(0,result);
-//        ybuff = ybuff + e + ",";
-//        String e1 = str.substring(result+1,result1-1);
-////        suuji2[3] = Integer.parseInt(e);
-//        e1 = e1.replace("<y<",",");
-////        suuji2[4] = Integer.parseInt(f[0]);
-////        suuji2[5] = Integer.parseInt(f[1]);
-//        ybuff = ybuff + e1;
-//    }
-
 
 }
