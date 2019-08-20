@@ -71,6 +71,10 @@ public class MainActivity extends AppCompatActivity {
 
         //点を細かくプロットすることで線にする
         for(x = gmin; x < gmax; x += 0.01) {
+
+            for(y = 0;y < 4; y += 0.01){
+
+            }
             series = new PointsGraphSeries<>();
             //線の太さ
             series.setSize(3.0f);

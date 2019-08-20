@@ -62,7 +62,7 @@ public class Game1Activity extends AppCompatActivity {
     private double suuji[][] = new double[11][7];
     //suuji2[0]が１の時Y =、0の時X=の関数
     private double suuji2[] = new double[7];
-    
+
     Handler handler;
     Runnable runnable;
     GraphView graph;
@@ -104,7 +104,7 @@ public class Game1Activity extends AppCompatActivity {
                     break;
                 case 12:
                     //中学一年生レベル2
-                    NumberOfAnswer = 3;
+                    NumberOfAnswer = 4;
                     NumberOfSection = 1;
                     break;
                 case 13:
@@ -114,7 +114,7 @@ public class Game1Activity extends AppCompatActivity {
                     break;
                 case 14:
                     //中学一年生レベル4
-                    NumberOfAnswer = 4;
+                    NumberOfAnswer = 3;
                     NumberOfSection = 3;
                     break;
                 case 15:
@@ -430,7 +430,6 @@ public class Game1Activity extends AppCompatActivity {
 
     }
 
-
     //ランダムに配列を生成するメソッド
     private int[] createRandomArray(int n, int offset){
         int data[] = new int[n];
@@ -574,7 +573,7 @@ public class Game1Activity extends AppCompatActivity {
     private void plotMain(int NumberOfAnswer){
         graph = findViewById(R.id.graph1);
 
-        for(int i=1;i<NumberOfAnswer;i++){
+        for(int i=0;i<NumberOfAnswer+1;i++){
             if (suuji[i][0] == 1) {
                 drawYGraphView(graph, (int) suuji[i][5], (int) suuji[i][6], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], Color.BLACK);
             } else {
