@@ -287,6 +287,7 @@ public class Game1Activity extends AppCompatActivity {
             judge = null;
         }
 
+        //お題を黒でプロットするメソッド,答えの数を引数にしてある
         plotMain(NumberOfAnswer);
 
         // 問題をボタンのラベルとして表示
@@ -655,10 +656,12 @@ public class Game1Activity extends AppCompatActivity {
         //"="の前の文字がxかyかの判定
         String a[] = value.split("=");
         judge = a[0];
+        //Yの関数の場合judgeにXを格納、また１の時にYの関数と判定
         if(judge.equals("y")){
             judge = "x";
             buff = "1,";
         }
+        //Xの関数の場合judgeにXを格納、また０の時にXの関数と判定
         else{
             judge = "y";
             buff = "0,";
@@ -668,9 +671,14 @@ public class Game1Activity extends AppCompatActivity {
         int result = a[1].indexOf(judge + "^3");
         if (result != -1) {
 
+            //judgeがXの場合、文字列"x^3+"を文字列","に変換
             a[1] = a[1].replace(judge + "^3+", ",");
             a[1] = a[1].replace(judge + "^3-", ",");
+
+            //a[1]の文字列のインデックスが1からresult + 1までの文字列をbuffに格納
             buff = a[1].substring(0, result + 1);
+
+            //a[1]の文字列を","の文字で分割、b[0]に","より前半の文字列を格納、b[1]に","より後半の文字列を格納
             String b[] = a[1].split(",");
             xvalueGet1(b[1]);
         } else {
@@ -718,7 +726,7 @@ public class Game1Activity extends AppCompatActivity {
         }
     }
 
-    //csvから切片と範囲の値を取得するメソッド、(2x+8 (2<x<4))のように空白で判断
+    //csvから切片と範囲の値を取得するメソッド
     private void xvalueGet3(String d) {
         int result = d.indexOf("(");
         int result1 = d.length();
@@ -729,7 +737,14 @@ public class Game1Activity extends AppCompatActivity {
         buff = buff + e1;
     }
 
-    //文字列から係数を数字にするメソッド
+    //文字列から係数を数字にするメソッド、返り値は各係数の値を格納した配列
+    //result[０]はxの関数かyの関数かを判定する値
+    //result[１]はx^3の係数
+    //result[２]はx^２の係数
+    //result[３]はxの係数
+    //result[４]は切片
+    //result[５]は関数の範囲の値が小さい方の値
+    //result[６]は関数の範囲の値が大きい方の値
     private double[] strChange(String buf){
         double result[] = new double[7];
         String a[] = buf.split(",",7);
@@ -738,6 +753,7 @@ public class Game1Activity extends AppCompatActivity {
                 result[i] = 1;
             }
             else{
+                //String型からDouble型へ変換
                 result[i] = Double.parseDouble(a[i]);
             }
         }
