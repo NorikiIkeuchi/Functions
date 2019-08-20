@@ -19,19 +19,34 @@ public class MainActivity extends AppCompatActivity {
 
         GraphView graph = (GraphView) findViewById(R.id.graph1);
         startGraphView(graph);
-        drawYGraphView(graph, -4, 4, 0.0, 0.0, 0.0, -6, Color.BLACK);
-        drawYGraphView(graph, -4, 4, 0.0, 0.0, 0, 6, Color.BLACK);
-        drawXGraphView(graph, -6, 0, 0.0, 0.0, 0.0, 4, Color.BLACK);
-        drawXGraphView(graph, -6, 0, 0.0, 0.0, 0.0, -4, Color.BLACK);
-        drawYGraphView(graph, -6, -4, 0.0, 0.0, 1, 4, Color.BLACK);
-        drawYGraphView(graph, 4, 6, 0.0, 0.0, -1, 4, Color.BLACK);
-        drawYGraphView(graph, 6, 8, 0.0, 0.0, 2, -14, Color.BLACK);
-        drawYGraphView(graph, -8, -6, 0.0, 0.0, -2, -14, Color.BLACK);
-        drawYGraphView(graph, -8, -4, 0.0, 0.0, 1, 10, Color.BLACK);
-        drawYGraphView(graph, 4, 8, 0.0, 0.0, -1, 10, Color.BLACK);
-        drawYGraphView(graph, -2, 2, 0.0, 0.5, 0, 4, Color.BLACK);
+        //シャツ
+//        drawYGraphView(graph, -4, 4, 0.0, 0.0, 0.0, -6, Color.BLACK);
+//        drawYGraphView(graph, -4, 4, 0.0, 0.0, 0, 6, Color.BLACK);
+//        drawXGraphView(graph, -6, 0, 0.0, 0.0, 0.0, 4, Color.BLACK);
+//        drawXGraphView(graph, -6, 0, 0.0, 0.0, 0.0, -4, Color.BLACK);
+//        drawYGraphView(graph, -6, -4, 0.0, 0.0, 1, 4, Color.BLACK);
+//        drawYGraphView(graph, 4, 6, 0.0, 0.0, -1, 4, Color.BLACK);
+//        drawYGraphView(graph, 6, 8, 0.0, 0.0, 2, -14, Color.BLACK);
+//        drawYGraphView(graph, -8, -6, 0.0, 0.0, -2, -14, Color.BLACK);
+//        drawYGraphView(graph, -8, -4, 0.0, 0.0, 1, 10, Color.BLACK);
+//        drawYGraphView(graph, 4, 8, 0.0, 0.0, -1, 10, Color.BLACK);
+//        drawYGraphView(graph, -2, 2, 0.0, 0.5, 0, 4, Color.BLACK);
 //        drawXGraphView(graph, -5, 3, 0.0, 0.0, 0.0, 2.0, Color.GRAY);
 //        drawXGraphView(graph, -5, 3, 0.0, 0.0, 0.0, 2.0, Color.BLUE);
+
+        //時計
+//        drawYGraphView(graph, -2.85, 2.85, 0.0, 0.5, 0.0, -4, Color.BLACK);
+//        drawYGraphView(graph, -2.85, 2.85, 0.0, -0.5, 0.0, 4, Color.BLACK);
+//        drawYGraphView(graph, -2.0, -1.0, 0.0, 0, 6, 14, Color.BLACK);
+//        drawYGraphView(graph, 1.0, 2.0, 0.0, 0, -6, 14, Color.BLACK);
+//        drawYGraphView(graph, -1.0, 1.0, 0.0, 0, 0, 8, Color.BLACK);
+//        drawYGraphView(graph, -2.0, -1.0, 0.0, 0, -6, -14, Color.BLACK);
+//        drawYGraphView(graph, 1.0, 2.0, 0.0, 0, 6, -14, Color.BLACK);
+//        drawYGraphView(graph, -1.0, 1.0, 0.0, 0, 0, -8, Color.BLACK);
+//        drawXGraphView(graph, 0, 1, 0.0, 0, 1.5, 0, Color.BLACK);
+//        drawXGraphView(graph, 0, 2.0, 0.0, 0, -0.7, 0, Color.BLACK);
+
+        //
     }
 
     private void startGraphView(GraphView graph){
@@ -50,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     //関数のパラメータを渡してY=なんちゃらのグラフを描画する(とりあえず3次関数まで 例:y=ax^3+bx^2+c^x+d)
     //int gminは表示させるグラフの最小 , int gmaxは表示させるグラフの最大の範囲を渡す
     //int colorは線の色(例：赤=Color.RED, 青=Color.BLUE, 灰色=Color.GRAY, 黒=Color.BLACK)
-    private void drawYGraphView(GraphView graph, int gmin, int gmax, double a, double b, double c, double d, int color){
+    private void drawYGraphView(GraphView graph, double gmin, double gmax, double a, double b, double c, double d, int color){
         double x;
         double y;
 
@@ -76,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
     //関数のパラメータを渡してX=なんちゃらのグラフを描画する(とりあえず3次関数まで 例:x=ay^3+by^2+c^y+d)
     //int gminは表示させるグラフの最小 , int gmaxは表示させるグラフの最大の範囲を渡す
     //int colorは線の色(例：赤=Color.RED, 青=Color.BLUE, 灰色=Color.GRAY, 黒=Color.BLACK)
-    private void drawXGraphView(GraphView graph, int gmin, int gmax, double a, double b, double c, double d, int color){
+    private void drawXGraphView(GraphView graph, double gmin, double gmax, double a, double b, double c, double d, int color){
         double x;
         double y;
 

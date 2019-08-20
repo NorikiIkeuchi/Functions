@@ -61,8 +61,9 @@ public class Game1Activity extends AppCompatActivity {
 //    private String b[] = new String[2];
 //    private String c[] = new String[2];
 //    private String d[] = new String[2];
-    private double suuji[][] = new double[11][6];
-    private double suuji2[] = new double[6];
+    private double suuji[][] = new double[11][7];
+    //suuji2[0]が１の時Y =、0の時X=の関数
+    private double suuji2[] = new double[7];
     //    private ImageView vi;
 //    private ImageView vi2;
 //    private ImageView vi3;
@@ -70,6 +71,8 @@ public class Game1Activity extends AppCompatActivity {
 //    private ImageView vi6;
     Handler handler;
     Runnable runnable;
+    GraphView graph;
+
 
 
     @Override
@@ -77,10 +80,11 @@ public class Game1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game1);
 
-        GraphView graph = findViewById(R.id.graph1);
+        graph = findViewById(R.id.graph1);
 
         //グラフの軸表示
         startGraphView(graph);
+
 
         // ビューの初期化
         answerButton1 =  findViewById(R.id.button1);
@@ -103,16 +107,10 @@ public class Game1Activity extends AppCompatActivity {
                     //中学一年生レベル1
                     NumberOfAnswer = 4;
                     NumberOfSection = 0;
-
-                    //例題
-                    drawXGraphView(graph, -2, 2, 0, 0, 0, 2, Color.BLACK);
-                    drawXGraphView(graph, -2, 2, 0, 0, 0, -2, Color.BLACK);
-                    drawYGraphView(graph, -2, 2, 0, 0, 0, 2, Color.BLACK);
-                    drawYGraphView(graph, -2, 2, 0, 0, 0, -2, Color.BLACK);
                     break;
                 case 12:
                     //中学一年生レベル2
-                    NumberOfAnswer = 4;
+                    NumberOfAnswer = 3;
                     NumberOfSection = 1;
                     break;
                 case 13:
@@ -229,6 +227,7 @@ public class Game1Activity extends AppCompatActivity {
                     //高校二年生レベル5
                     NumberOfAnswer = 4;
                     NumberOfSection = 24;
+                    plotMain(NumberOfAnswer);
                     break;
                 case 131:
                     //高校三年生レベル1
@@ -261,7 +260,6 @@ public class Game1Activity extends AppCompatActivity {
             }
         }
 
-
         //csvファイルの読み込み
         try {
             AssetManager as = getResources().getAssets();
@@ -278,17 +276,18 @@ public class Game1Activity extends AppCompatActivity {
         }
 
         //csvファイルから係数の取得
-        for (int i = 1; i < 10; i++) {
+        for (int i = 1; i < 11; i++) {
             str = questions[NumberOfSection][i];
             xvalueGet(str);
             suuji2 = strChange(buff);
-            for(int j=0; j< 6; j++){
+            for(int j=0; j<7; j++){
                 //二次元配列に係数を格納している
                 suuji[i][j] = suuji2[j];
             }
             judge = null;
         }
 
+        plotMain(NumberOfAnswer);
 
         // 問題をボタンのラベルとして表示
         final int Num[] = setQuizText(NumberOfSection);
@@ -479,62 +478,82 @@ public class Game1Activity extends AppCompatActivity {
     private void numberCertain(int Num[], int number) {
         GraphView graph = findViewById(R.id.graph1);
 
-        if (Num[number] == 1) {
-
-            drawYGraphView(graph, (int)suuji[1][4], (int)suuji[1][5], suuji[1][0], suuji[1][1], suuji[1][2], suuji[1][3], Color.BLUE);
-
-            //正解時にカウント
-            answer_count++;
-        } else if (Num[number] == 2) {
-
-            drawXGraphView(graph, (int)suuji[2][4], (int)suuji[2][5], suuji[2][0], suuji[2][1], suuji[2][2], suuji[2][3], Color.BLUE);
-
-            //正解時にカウント
-            answer_count++;
-        } else if (Num[number] == 3) {
-
-            drawYGraphView(graph, (int)suuji[3][4], (int)suuji[3][5], suuji[3][0], suuji[3][1], suuji[3][2], suuji[3][3], Color.BLUE);
-
-            //正解時にカウント
-            answer_count++;
-        } else if (Num[number] == 4) {
-
-            drawXGraphView(graph, (int)suuji[4][4], (int)suuji[4][5], suuji[4][0], suuji[4][1], suuji[4][2], suuji[4][3], Color.BLUE);
-            //正解時にカウント
-            answer_count++;
-        } else if (Num[number] == 5) {
-            drawYGraphView(graph, (int)suuji[5][4], (int)suuji[5][5], suuji[5][0], suuji[5][1], suuji[5][2], suuji[5][3], Color.RED);
-
-            //間違い
-            time = time - 10;
-        } else if (Num[number] == 6) {
-            drawXGraphView(graph, (int)suuji[6][4], (int)suuji[6][5], suuji[6][0], suuji[6][1], suuji[6][2], suuji[6][3], Color.RED);
-
-            //間違い
-            time = time - 10;
-        } else if (Num[number] == 7) {
-            drawYGraphView(graph, (int)suuji[7][4], (int)suuji[7][5], suuji[7][0], suuji[7][1], suuji[7][2], suuji[7][3], Color.RED);
-
-            //間違い
-            time = time - 10;
-        } else if (Num[number] == 8) {
-            drawXGraphView(graph, (int)suuji[8][4], (int)suuji[8][5], suuji[8][0], suuji[8][1], suuji[8][2], suuji[8][3], Color.RED);
-
-            //間違い
-            time = time - 10;
-        } else if (Num[number] == 9) {
-            drawYGraphView(graph, (int)suuji[9][4], (int)suuji[9][5], suuji[9][0], suuji[9][1], suuji[9][2], suuji[9][3], Color.RED);
-
-            //間違い
-            time = time - 10;
-        } else if (Num[number] == 10) {
-            drawXGraphView(graph, (int)suuji[10][4], (int)suuji[10][5], suuji[10][0], suuji[10][1], suuji[10][2], suuji[10][3], Color.RED);
-
-            //間違い
-            time = time - 10;
-        } else if (true) {
-            time = time - 10;
+        if (suuji[Num[number]][0] == 1) {
+            if(Num[number] <= NumberOfAnswer){
+                drawYGraphView(graph, (int) suuji[Num[number]][5], (int) suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.BLUE);
+                answer_count++;
+            }
+            else{
+                drawYGraphView(graph, (int) suuji[Num[number]][5], (int) suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.RED);
+                time = time - 10;
+            }
+        } else {
+            if(Num[number] <= 4){
+                drawXGraphView(graph, (int) suuji[Num[number]][5], (int) suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.BLUE);
+                answer_count++;
+            }
+            else{
+                drawXGraphView(graph, (int) suuji[Num[number]][5], (int) suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.RED);
+                time = time - 10;
+            }
         }
+//
+//        if (Num[number] == 1) {
+//
+//            drawYGraphView(graph, (int)suuji[1][5], (int)suuji[1][6], suuji[1][1], suuji[1][2], suuji[1][3], suuji[1][4], Color.BLUE);
+//
+//            //正解時にカウント
+//            answer_count++;
+//        } else if (Num[number] == 2) {
+//
+//            drawXGraphView(graph, (int)suuji[2][4], (int)suuji[2][5], suuji[2][0], suuji[2][1], suuji[2][2], suuji[2][3], Color.BLUE);
+//
+//            //正解時にカウント
+//            answer_count++;
+//        } else if (Num[number] == 3) {
+//
+//            drawYGraphView(graph, (int)suuji[3][4], (int)suuji[3][5], suuji[3][0], suuji[3][1], suuji[3][2], suuji[3][3], Color.BLUE);
+//
+//            //正解時にカウント
+//            answer_count++;
+//        } else if (Num[number] == 4) {
+//
+//            drawXGraphView(graph, (int)suuji[4][4], (int)suuji[4][5], suuji[4][0], suuji[4][1], suuji[4][2], suuji[4][3], Color.BLUE);
+//            //正解時にカウント
+//            answer_count++;
+//        } else if (Num[number] == 5) {
+//            drawYGraphView(graph, (int)suuji[5][4], (int)suuji[5][5], suuji[5][0], suuji[5][1], suuji[5][2], suuji[5][3], Color.RED);
+//
+//            //間違い
+//            time = time - 10;
+//        } else if (Num[number] == 6) {
+//            drawXGraphView(graph, (int)suuji[6][4], (int)suuji[6][5], suuji[6][0], suuji[6][1], suuji[6][2], suuji[6][3], Color.RED);
+//
+//            //間違い
+//            time = time - 10;
+//        } else if (Num[number] == 7) {
+//            drawYGraphView(graph, (int)suuji[7][4], (int)suuji[7][5], suuji[7][0], suuji[7][1], suuji[7][2], suuji[7][3], Color.RED);
+//
+//            //間違い
+//            time = time - 10;
+//        } else if (Num[number] == 8) {
+//            drawXGraphView(graph, (int)suuji[8][4], (int)suuji[8][5], suuji[8][0], suuji[8][1], suuji[8][2], suuji[8][3], Color.RED);
+//
+//            //間違い
+//            time = time - 10;
+//        } else if (Num[number] == 9) {
+//            drawYGraphView(graph, (int)suuji[9][4], (int)suuji[9][5], suuji[9][0], suuji[9][1], suuji[9][2], suuji[9][3], Color.RED);
+//
+//            //間違い
+//            time = time - 10;
+//        } else if (Num[number] == 10) {
+//            drawXGraphView(graph, (int)suuji[10][4], (int)suuji[10][5], suuji[10][0], suuji[10][1], suuji[10][2], suuji[10][3], Color.RED);
+//
+//            //間違い
+//            time = time - 10;
+//        } else if (true) {
+//            time = time - 10;
+//        }
 
 
 //        return array;
@@ -615,27 +634,47 @@ public class Game1Activity extends AppCompatActivity {
         }
     }
 
+    //CSVからお題をプロット
+    private void plotMain(int NumberOfAnswer){
+        graph = findViewById(R.id.graph1);
+
+        for(int i=1;i<NumberOfAnswer;i++){
+            if (suuji[i][0] == 1) {
+                drawYGraphView(graph, (int) suuji[i][5], (int) suuji[i][6], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], Color.BLACK);
+            } else {
+                drawXGraphView(graph, (int) suuji[i][5], (int) suuji[i][6], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], Color.BLACK);
+
+            }
+        }
+    }
+
+
     //csvからx^3の係数を取得するメソッド(valueに数式を入れるとbuffに各係数の値が格納される)
     private void xvalueGet(String value){
 
+        //"="の前の文字がxかyかの判定
         String a[] = value.split("=");
         judge = a[0];
         if(judge.equals("y")){
             judge = "x";
+            buff = "1,";
         }
         else{
             judge = "y";
+            buff = "0,";
         }
 
-        int result = a[1].indexOf(judge + "^3+");
+        //"x^3+"が文字列内に存在しない場合resultに-1を格納
+        int result = a[1].indexOf(judge + "^3");
         if (result != -1) {
 
             a[1] = a[1].replace(judge + "^3+", ",");
+            a[1] = a[1].replace(judge + "^3-", ",");
             buff = a[1].substring(0, result + 1);
             String b[] = a[1].split(",");
             xvalueGet1(b[1]);
         } else {
-            buff = "0,";
+            buff = buff + "0,";
             xvalueGet1(a[1]);
         }
     }
@@ -645,6 +684,7 @@ public class Game1Activity extends AppCompatActivity {
         int result = b.indexOf(judge + "^2");
         if(result != -1){
             b = b.replace(judge + "^2+",",");
+            b = b.replace(judge + "^2-",",");
             buff = buff + b.substring(0,result+1);
             String c[] = b.split(",");
             xvalueGet2(c[1]);
@@ -658,13 +698,21 @@ public class Game1Activity extends AppCompatActivity {
     //csvからxの係数を取得するメソッド
     private void xvalueGet2(String c) {
         int result = c.indexOf(judge + "+");
+        int result1 = c.indexOf(judge + "-");
         if(result != -1){
             c = c.replace(judge + "+",",");
             buff = buff + c.substring(0,result+1);
             String d[] = c.split(",");
             xvalueGet3(d[1]);
         }
-        else{
+        else if(result1 != -1){
+            c = c.replace(judge + "-",",");
+            buff = buff + c.substring(0,result1+1);
+            String d[] = c.split(",");
+            d[1] = "-" + d[1];
+            xvalueGet3(d[1]);
+        }
+        else if(true){
             buff = buff + "0,";
             xvalueGet3(c);
         }
@@ -672,7 +720,7 @@ public class Game1Activity extends AppCompatActivity {
 
     //csvから切片と範囲の値を取得するメソッド、(2x+8 (2<x<4))のように空白で判断
     private void xvalueGet3(String d) {
-        int result = d.indexOf("[");
+        int result = d.indexOf("(");
         int result1 = d.length();
         String e = d.substring(0,result);
         buff = buff + e + ",";
@@ -683,9 +731,9 @@ public class Game1Activity extends AppCompatActivity {
 
     //文字列から係数を数字にするメソッド
     private double[] strChange(String buf){
-        double result[] = new double[6];
-        String a[] = buf.split(",",6);
-        for(int i=0;i<6;i++){
+        double result[] = new double[7];
+        String a[] = buf.split(",",7);
+        for(int i=0;i<7;i++){
             if(a[i].isEmpty()){
                 result[i] = 1;
             }
@@ -695,5 +743,6 @@ public class Game1Activity extends AppCompatActivity {
         }
         return result;
     }
+
 
 }

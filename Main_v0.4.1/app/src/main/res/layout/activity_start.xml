@@ -11,7 +11,7 @@
         android:id="@+id/myText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="関数お絵かきクイズ"
+        android:text="Functions"
         android:textColor="#ffffff"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"

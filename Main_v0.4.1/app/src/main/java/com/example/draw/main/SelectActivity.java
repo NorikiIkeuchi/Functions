@@ -45,7 +45,7 @@ public class SelectActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             final String[] items = {"一年生", "二年生", "三年生"};
-            final String[] items2 = {"レベル1","レベル2","レベル3","レベル4","レベル5"};
+            final String[] items2 = {"レベル1","レベル2","レベル3"};
 
             //中学生
             if(view == tyugaku){
