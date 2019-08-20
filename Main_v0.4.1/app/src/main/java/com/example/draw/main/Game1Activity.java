@@ -112,142 +112,142 @@ public class Game1Activity extends AppCompatActivity {
                     NumberOfAnswer = 4;
                     NumberOfSection = 2;
                     break;
-                case 14:
-                    //中学一年生レベル4
+//                case 14:
+//                    //中学一年生レベル4
+//                    NumberOfAnswer = 3;
+//                    NumberOfSection = 3;
+//                    break;
+//                case 15:
+//                    //中学一年生レベル5
+//                    NumberOfAnswer = 4;
+//                    NumberOfSection = 4;
+//                    break;
+                case 21:
+                    //中学二年生レベル1
                     NumberOfAnswer = 3;
                     NumberOfSection = 3;
                     break;
-                case 15:
-                    //中学一年生レベル5
-                    NumberOfAnswer = 4;
-                    NumberOfSection = 4;
-                    break;
-                case 21:
-                    //中学二年生レベル1
-                    NumberOfAnswer = 4;
-                    NumberOfSection = 5;
-                    break;
                 case 22:
                     //中学二年生レベル2
-                    NumberOfAnswer = 4;
-                    NumberOfSection = 6;
+                    NumberOfAnswer = 3;
+                    NumberOfSection = 4;
                     break;
                 case 23:
                     //中学二年生レベル3
                     NumberOfAnswer = 4;
-                    NumberOfSection = 7;
+                    NumberOfSection = 5;
                     break;
-                case 24:
-                    //中学二年生レベル4
-                    NumberOfAnswer = 4;
-                    NumberOfSection = 8;
-                    break;
-                case 25:
-                    //中学二年生レベル5
-                    NumberOfAnswer = 4;
-                    NumberOfSection = 9;
-                    break;
+//                case 24:
+//                    //中学二年生レベル4
+//                    NumberOfAnswer = 4;
+//                    NumberOfSection = 8;
+//                    break;
+//                case 25:
+//                    //中学二年生レベル5
+//                    NumberOfAnswer = 4;
+//                    NumberOfSection = 9;
+//                    break;
                 case 31:
                     //中学三年生レベル1
-                    NumberOfAnswer = 4;
-                    NumberOfSection = 10;
+                    NumberOfAnswer = 3;
+                    NumberOfSection = 6;
                     break;
                 case 32:
                     //中学三年生レベル2
-                    NumberOfAnswer = 4;
-                    NumberOfSection = 11;
+                    NumberOfAnswer = 6;
+                    NumberOfSection = 7;
                     break;
                 case 33:
                     //中学三年生レベル3
-                    NumberOfAnswer = 4;
-                    NumberOfSection = 12;
+                    NumberOfAnswer = 6;
+                    NumberOfSection = 8;
                     break;
                 case 34:
-                    //中学三年生レベル4
-                    NumberOfAnswer = 4;
-                    NumberOfSection = 13;
-                    break;
-                case 35:
-                    //中学三年生レベル5
-                    NumberOfAnswer = 4;
-                    NumberOfSection = 14;
-                    break;
+//                    //中学三年生レベル4
+//                    NumberOfAnswer = 4;
+//                    NumberOfSection = 13;
+//                    break;
+//                case 35:
+//                    //中学三年生レベル5
+//                    NumberOfAnswer = 4;
+//                    NumberOfSection = 14;
+//                    break;
                 case 111:
                     //高校一年生レベル1
                     NumberOfAnswer = 4;
-                    NumberOfSection = 15;
+                    NumberOfSection = 9;
                     break;
                 case 112:
                     //高校一年生レベル2
                     NumberOfAnswer = 4;
-                    NumberOfSection = 16;
+                    NumberOfSection = 10;
                     break;
                 case 113:
                     //高校一年生レベル3
                     NumberOfAnswer = 4;
-                    NumberOfSection = 17;
+                    NumberOfSection = 11;
                     break;
-                case 114:
-                    //高校一年生レベル4
-                    NumberOfAnswer = 4;
-                    NumberOfSection = 18;
-                    break;
-                case 115:
-                    //高校一年生レベル5
-                    NumberOfAnswer = 4;
-                    NumberOfSection = 19;
-                    break;
+//                case 114:
+//                    //高校一年生レベル4
+//                    NumberOfAnswer = 4;
+//                    NumberOfSection = 18;
+//                    break;
+//                case 115:
+//                    //高校一年生レベル5
+//                    NumberOfAnswer = 4;
+//                    NumberOfSection = 19;
+//                    break;
                 case 121:
                     //高校二年生レベル1
                     NumberOfAnswer = 4;
-                    NumberOfSection = 20;
+                    NumberOfSection = 12;
                     break;
                 case 122:
                     //高校二年生レベル2
                     NumberOfAnswer = 4;
-                    NumberOfSection = 21;
+                    NumberOfSection = 13;
                     break;
                 case 123:
                     //高校二年生レベル3
                     NumberOfAnswer = 4;
-                    NumberOfSection = 22;
+                    NumberOfSection = 14;
                     break;
-                case 124:
-                    //高校二年生レベル4
-                    NumberOfAnswer = 4;
-                    NumberOfSection = 23;
-                    break;
-                case 125:
-                    //高校二年生レベル5
-                    NumberOfAnswer = 4;
-                    NumberOfSection = 24;
-                    plotMain(NumberOfAnswer);
-                    break;
+//                case 124:
+//                    //高校二年生レベル4
+//                    NumberOfAnswer = 4;
+//                    NumberOfSection = 23;
+//                    break;
+//                case 125:
+//                    //高校二年生レベル5
+//                    NumberOfAnswer = 4;
+//                    NumberOfSection = 24;
+//                    plotMain(NumberOfAnswer);
+//                    break;
                 case 131:
                     //高校三年生レベル1
                     NumberOfAnswer = 4;
-                    NumberOfSection = 25;
+                    NumberOfSection = 15;
                     break;
                 case 132:
                     //高校三年生レベル2
                     NumberOfAnswer = 4;
-                    NumberOfSection = 26;
+                    NumberOfSection = 16;
                     break;
                 case 133:
                     //高校三年生レベル3
                     NumberOfAnswer = 4;
-                    NumberOfSection = 27;
+                    NumberOfSection = 17;
                     break;
-                case 134:
-                    //高校三年生レベル4
-                    NumberOfAnswer = 4;
-                    NumberOfSection = 28;
-                    break;
-                case 135:
-                    //高校三年生レベル5
-                    NumberOfAnswer = 4;
-                    NumberOfSection = 29;
-                    break;
+//                case 134:
+//                    //高校三年生レベル4
+//                    NumberOfAnswer = 4;
+//                    NumberOfSection = 28;
+//                    break;
+//                case 135:
+//                    //高校三年生レベル5
+//                    NumberOfAnswer = 4;
+//                    NumberOfSection = 29;
+//                    break;
                 default:
                     //不正
                     break;
@@ -474,20 +474,20 @@ public class Game1Activity extends AppCompatActivity {
 
         if (suuji[Num[number]][0] == 1) {
             if(Num[number] <= NumberOfAnswer){
-                drawYGraphView(graph, (int) suuji[Num[number]][5], (int) suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.BLUE);
+                drawYGraphView(graph, suuji[Num[number]][5], suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.BLUE);
                 answer_count++;
             }
             else{
-                drawYGraphView(graph, (int) suuji[Num[number]][5], (int) suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.RED);
+                drawYGraphView(graph, suuji[Num[number]][5], suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.RED);
                 time = time - 10;
             }
         } else {
-            if(Num[number] <= 4){
-                drawXGraphView(graph, (int) suuji[Num[number]][5], (int) suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.BLUE);
+            if(Num[number] <= NumberOfAnswer){
+                drawXGraphView(graph, suuji[Num[number]][5], suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.BLUE);
                 answer_count++;
             }
             else{
-                drawXGraphView(graph, (int) suuji[Num[number]][5], (int) suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.RED);
+                drawXGraphView(graph, suuji[Num[number]][5], suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.RED);
                 time = time - 10;
             }
         }
@@ -521,7 +521,7 @@ public class Game1Activity extends AppCompatActivity {
     //関数のパラメータを渡してY=なんちゃらのグラフを描画する(とりあえず3次関数まで 例:y=ax^3+bx^2+c^x+d)
     //int gminは表示させるグラフの最小 , int gmaxは表示させるグラフの最大の範囲を渡す
     //int colorは線の色(例：赤=Color.RED, 青=Color.BLUE, 灰色=Color.GRAY, 黒=Color.BLACK)
-    private void drawYGraphView(GraphView graph, int gmin, int gmax, double a, double b, double c, double d, int color){
+    private void drawYGraphView(GraphView graph, double gmin, double gmax, double a, double b, double c, double d, int color){
         double x;
         double y;
 
@@ -547,7 +547,7 @@ public class Game1Activity extends AppCompatActivity {
     //関数のパラメータを渡してX=なんちゃらのグラフを描画する(とりあえず3次関数まで 例:x=ay^3+by^2+c^y+d)
     //int gminは表示させるグラフの最小 , int gmaxは表示させるグラフの最大の範囲を渡す
     //int colorは線の色(例：赤=Color.RED, 青=Color.BLUE, 灰色=Color.GRAY, 黒=Color.BLACK)
-    private void drawXGraphView(GraphView graph, int gmin, int gmax, double a, double b, double c, double d, int color){
+    private void drawXGraphView(GraphView graph, double gmin, double gmax, double a, double b, double c, double d, int color){
         double x;
         double y;
 
@@ -575,9 +575,9 @@ public class Game1Activity extends AppCompatActivity {
 
         for(int i=0;i<NumberOfAnswer+1;i++){
             if (suuji[i][0] == 1) {
-                drawYGraphView(graph, (int) suuji[i][5], (int) suuji[i][6], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], Color.BLACK);
+                drawYGraphView(graph, suuji[i][5], suuji[i][6], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], Color.BLACK);
             } else {
-                drawXGraphView(graph, (int) suuji[i][5], (int) suuji[i][6], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], Color.BLACK);
+                drawXGraphView(graph, suuji[i][5], suuji[i][6], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], Color.BLACK);
 
             }
         }
@@ -603,19 +603,29 @@ public class Game1Activity extends AppCompatActivity {
 
         //"x^3+"が文字列内に存在しない場合resultに-1を格納
         int result = a[1].indexOf(judge + "^3");
+        int result2 = a[1].indexOf(judge + "^3(");
         if (result != -1) {
+            if (result2 != -1) {
+                a[1] = a[1].replace(judge + "^3(", ",");
+                buff = buff + a[1].substring(0, result2 + 1);
+                String b[] = a[1].split(",");
+                b[1] = "(" + b[1];
+                buff = buff + "0,";
+                xvalueGet3(b[1]);
+            } else {
+                //judgeがXの場合、文字列"x^3+"を文字列","に変換
+                a[1] = a[1].replace(judge + "^3+", ",");
+                a[1] = a[1].replace(judge + "^3-", ",");
 
-            //judgeがXの場合、文字列"x^3+"を文字列","に変換
-            a[1] = a[1].replace(judge + "^3+", ",");
-            a[1] = a[1].replace(judge + "^3-", ",");
+                //a[1]の文字列のインデックスが1からresult + 1までの文字列をbuffに格納
+                buff = a[1].substring(0, result + 1);
 
-            //a[1]の文字列のインデックスが1からresult + 1までの文字列をbuffに格納
-            buff = a[1].substring(0, result + 1);
-
-            //a[1]の文字列を","の文字で分割、b[0]に","より前半の文字列を格納、b[1]に","より後半の文字列を格納
-            String b[] = a[1].split(",");
-            xvalueGet1(b[1]);
-        } else {
+                //a[1]の文字列を","の文字で分割、b[0]に","より前半の文字列を格納、b[1]に","より後半の文字列を格納
+                String b[] = a[1].split(",");
+                xvalueGet1(b[1]);
+            }
+        }
+        else {
             buff = buff + "0,";
             xvalueGet1(a[1]);
         }
@@ -624,12 +634,22 @@ public class Game1Activity extends AppCompatActivity {
     //csvからx^2の係数を取得するメソッド
     private void xvalueGet1(String b) {
         int result = b.indexOf(judge + "^2");
-        if(result != -1){
-            b = b.replace(judge + "^2+",",");
-            b = b.replace(judge + "^2-",",");
-            buff = buff + b.substring(0,result+1);
-            String c[] = b.split(",");
-            xvalueGet2(c[1]);
+        int result2 = b.indexOf(judge + "^2(");
+        if(result != -1) {
+            if (result2 != -1) {
+                b = b.replace(judge + "^2(", ",");
+                buff = buff + b.substring(0, result2 + 1);
+                String c[] = b.split(",");
+                c[1] = "(" + c[1];
+                buff = buff + "0,";
+                xvalueGet3(c[1]);
+            } else {
+                b = b.replace(judge + "^2+", ",");
+                b = b.replace(judge + "^2-", ",");
+                buff = buff + b.substring(0, result + 1);
+                String c[] = b.split(",");
+                xvalueGet2(c[1]);
+            }
         }
         else{
             buff = buff + "0,";
@@ -641,6 +661,7 @@ public class Game1Activity extends AppCompatActivity {
     private void xvalueGet2(String c) {
         int result = c.indexOf(judge + "+");
         int result1 = c.indexOf(judge + "-");
+        int result2 = c.indexOf(judge + "(");
         if(result != -1){
             c = c.replace(judge + "+",",");
             buff = buff + c.substring(0,result+1);
@@ -654,6 +675,14 @@ public class Game1Activity extends AppCompatActivity {
             d[1] = "-" + d[1];
             xvalueGet3(d[1]);
         }
+        else if(result2 != -1){
+            c = c.replace(judge + "(",",");
+            buff = buff + c.substring(0,result1+1);
+            String d[] = c.split(",");
+            d[1] = "(" + d[1];
+            buff = buff + "0,";
+            xvalueGet3(d[1]);
+        }
         else if(true){
             buff = buff + "0,";
             xvalueGet3(c);
@@ -665,7 +694,13 @@ public class Game1Activity extends AppCompatActivity {
         int result = d.indexOf("(");
         int result1 = d.length();
         String e = d.substring(0,result);
-        buff = buff + e + ",";
+        if(e.isEmpty()){
+            buff = buff + "0,";
+        }
+        else{
+            buff = buff + e + ",";
+        }
+
         String e1 = d.substring(result+1,result1-1);
         e1 = e1.replace("<" + judge + "<",",");
         buff = buff + e1;
@@ -686,8 +721,11 @@ public class Game1Activity extends AppCompatActivity {
             if(a[i].isEmpty()){
                 result[i] = 1;
             }
-            else{
+            else if(a[i].equals("-")){
                 //String型からDouble型へ変換
+                result[i] = -1;
+            }
+            else if(true){
                 result[i] = Double.parseDouble(a[i]);
             }
         }

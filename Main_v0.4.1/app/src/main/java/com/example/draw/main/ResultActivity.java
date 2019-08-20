@@ -41,6 +41,10 @@ public class ResultActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             int point = bundle.getInt("point");
+            if(point <= 0){
+                point = 0;
+            }
+
             TextView scoreText = (TextView) findViewById(R.id.textView_RPoint);
             scoreText.setText(String.format("%d", point));
         }
