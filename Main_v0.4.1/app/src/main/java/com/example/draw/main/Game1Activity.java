@@ -57,18 +57,12 @@ public class Game1Activity extends AppCompatActivity {
     String judge;
     //関数の係数が順番に入っている（,の前が空欄の場合だけ係数が1）
     private String buff;
-//    private String ybuff = "0,0,0,";
-//    private String b[] = new String[2];
-//    private String c[] = new String[2];
-//    private String d[] = new String[2];
+
+    //CSVから取得した関数の各係数などの値を格納する二次元配列
     private double suuji[][] = new double[11][7];
     //suuji2[0]が１の時Y =、0の時X=の関数
     private double suuji2[] = new double[7];
-    //    private ImageView vi;
-//    private ImageView vi2;
-//    private ImageView vi3;
-//    private ImageView vi4;
-//    private ImageView vi6;
+    
     Handler handler;
     Runnable runnable;
     GraphView graph;
@@ -498,66 +492,7 @@ public class Game1Activity extends AppCompatActivity {
                 time = time - 10;
             }
         }
-//
-//        if (Num[number] == 1) {
-//
-//            drawYGraphView(graph, (int)suuji[1][5], (int)suuji[1][6], suuji[1][1], suuji[1][2], suuji[1][3], suuji[1][4], Color.BLUE);
-//
-//            //正解時にカウント
-//            answer_count++;
-//        } else if (Num[number] == 2) {
-//
-//            drawXGraphView(graph, (int)suuji[2][4], (int)suuji[2][5], suuji[2][0], suuji[2][1], suuji[2][2], suuji[2][3], Color.BLUE);
-//
-//            //正解時にカウント
-//            answer_count++;
-//        } else if (Num[number] == 3) {
-//
-//            drawYGraphView(graph, (int)suuji[3][4], (int)suuji[3][5], suuji[3][0], suuji[3][1], suuji[3][2], suuji[3][3], Color.BLUE);
-//
-//            //正解時にカウント
-//            answer_count++;
-//        } else if (Num[number] == 4) {
-//
-//            drawXGraphView(graph, (int)suuji[4][4], (int)suuji[4][5], suuji[4][0], suuji[4][1], suuji[4][2], suuji[4][3], Color.BLUE);
-//            //正解時にカウント
-//            answer_count++;
-//        } else if (Num[number] == 5) {
-//            drawYGraphView(graph, (int)suuji[5][4], (int)suuji[5][5], suuji[5][0], suuji[5][1], suuji[5][2], suuji[5][3], Color.RED);
-//
-//            //間違い
-//            time = time - 10;
-//        } else if (Num[number] == 6) {
-//            drawXGraphView(graph, (int)suuji[6][4], (int)suuji[6][5], suuji[6][0], suuji[6][1], suuji[6][2], suuji[6][3], Color.RED);
-//
-//            //間違い
-//            time = time - 10;
-//        } else if (Num[number] == 7) {
-//            drawYGraphView(graph, (int)suuji[7][4], (int)suuji[7][5], suuji[7][0], suuji[7][1], suuji[7][2], suuji[7][3], Color.RED);
-//
-//            //間違い
-//            time = time - 10;
-//        } else if (Num[number] == 8) {
-//            drawXGraphView(graph, (int)suuji[8][4], (int)suuji[8][5], suuji[8][0], suuji[8][1], suuji[8][2], suuji[8][3], Color.RED);
-//
-//            //間違い
-//            time = time - 10;
-//        } else if (Num[number] == 9) {
-//            drawYGraphView(graph, (int)suuji[9][4], (int)suuji[9][5], suuji[9][0], suuji[9][1], suuji[9][2], suuji[9][3], Color.RED);
-//
-//            //間違い
-//            time = time - 10;
-//        } else if (Num[number] == 10) {
-//            drawXGraphView(graph, (int)suuji[10][4], (int)suuji[10][5], suuji[10][0], suuji[10][1], suuji[10][2], suuji[10][3], Color.RED);
-//
-//            //間違い
-//            time = time - 10;
-//        } else if (true) {
-//            time = time - 10;
-//        }
 
-
-//        return array;
         //解答の正解数が設定した問題の正解数と一致したときに画面遷移
         if (answer_count == NumberOfAnswer) {
             Intent intent = new Intent(Game1Activity.this, ResultActivity.class);
