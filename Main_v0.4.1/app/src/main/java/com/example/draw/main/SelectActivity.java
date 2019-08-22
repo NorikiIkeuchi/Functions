@@ -68,26 +68,26 @@ public class SelectActivity extends AppCompatActivity {
                     }
                 }).show();
                 nannido = 0;
-            }else{ //高校生
-                new AlertDialog.Builder(SelectActivity.this).setTitle("何年生？").setItems(items, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        nannido += 100 + (10 * (which + 1));
-
-                        new AlertDialog.Builder(SelectActivity.this).setTitle("レベルを選択してください。").setItems(items2, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                nannido += (which + 1);
-
-                                Intent intent = new Intent(SelectActivity.this, GamestartActivity.class);
-                                intent.putExtra("難易度", nannido);
-                                startActivity(intent);
-                            }
-                        }).show();
-
-                    }
-                }).show();
-                nannido = 0;
+//            }else{ //高校生
+//                new AlertDialog.Builder(SelectActivity.this).setTitle("何年生？").setItems(items, new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        nannido += 100 + (10 * (which + 1));
+//
+//                        new AlertDialog.Builder(SelectActivity.this).setTitle("レベルを選択してください。").setItems(items2, new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                nannido += (which + 1);
+//
+//                                Intent intent = new Intent(SelectActivity.this, GamestartActivity.class);
+//                                intent.putExtra("難易度", nannido);
+//                                startActivity(intent);
+//                            }
+//                        }).show();
+//
+//                    }
+//                }).show();
+//                nannido = 0;
             }
         }
     };

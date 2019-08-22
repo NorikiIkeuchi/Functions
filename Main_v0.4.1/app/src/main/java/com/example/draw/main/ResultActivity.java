@@ -44,6 +44,9 @@ public class ResultActivity extends AppCompatActivity {
             if(point <= 0){
                 point = 0;
             }
+            if(point >= 100){
+                point = 100;
+            }
 
             TextView scoreText = (TextView) findViewById(R.id.textView_RPoint);
             scoreText.setText(String.format("%d", point));

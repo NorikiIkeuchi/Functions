@@ -64,7 +64,7 @@ public class GamestartActivity extends AppCompatActivity {
                     tv1.setText("正解の選択数は3つ");
                     break;
                 case 23:
-                    tv.setText("中学二年生レベル");
+                    tv.setText("中学二年生レベル3");
                     tv1.setText("正解の選択数は4つ");
                     break;
 //                case 24:

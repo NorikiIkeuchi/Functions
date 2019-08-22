@@ -474,8 +474,13 @@ public class Game1Activity extends AppCompatActivity {
 
         if (suuji[Num[number]][0] == 1) {
             if(Num[number] <= NumberOfAnswer){
-                drawYGraphView(graph, suuji[Num[number]][5], suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.BLUE);
+                drawYGraphView(graph, suuji[Num[number]][5], suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.parseColor("#FF00C0"));
                 answer_count++;
+//                //正解すると時間を5秒増やす
+//                time = time + 5;
+//                if(time >= 100){
+//                    time = 101;
+//                }
             }
             else{
                 drawYGraphView(graph, suuji[Num[number]][5], suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.RED);
@@ -483,8 +488,13 @@ public class Game1Activity extends AppCompatActivity {
             }
         } else {
             if(Num[number] <= NumberOfAnswer){
-                drawXGraphView(graph, suuji[Num[number]][5], suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.BLUE);
+                drawXGraphView(graph, suuji[Num[number]][5], suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.GREEN);
                 answer_count++;
+                //正解すると時間を5秒増やす
+//                time = time + 5;
+//                if(time >= 100){
+//                    time = 101;
+//                }
             }
             else{
                 drawXGraphView(graph, suuji[Num[number]][5], suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.RED);
@@ -575,9 +585,9 @@ public class Game1Activity extends AppCompatActivity {
 
         for(int i=0;i<NumberOfAnswer+1;i++){
             if (suuji[i][0] == 1) {
-                drawYGraphView(graph, suuji[i][5], suuji[i][6], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], Color.BLACK);
+                drawYGraphView(graph, suuji[i][5], suuji[i][6], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], Color.YELLOW);
             } else {
-                drawXGraphView(graph, suuji[i][5], suuji[i][6], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], Color.BLACK);
+                drawXGraphView(graph, suuji[i][5], suuji[i][6], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], Color.YELLOW);
 
             }
         }
@@ -610,7 +620,7 @@ public class Game1Activity extends AppCompatActivity {
                 buff = buff + a[1].substring(0, result2 + 1);
                 String b[] = a[1].split(",");
                 b[1] = "(" + b[1];
-                buff = buff + "0,";
+                buff = buff + b[0] + ",";
                 xvalueGet3(b[1]);
             } else {
                 //judgeがXの場合、文字列"x^3+"を文字列","に変換
@@ -641,7 +651,7 @@ public class Game1Activity extends AppCompatActivity {
                 buff = buff + b.substring(0, result2 + 1);
                 String c[] = b.split(",");
                 c[1] = "(" + c[1];
-                buff = buff + "0,";
+                buff = buff + c[0] + ",";
                 xvalueGet3(c[1]);
             } else {
                 b = b.replace(judge + "^2+", ",");
@@ -680,7 +690,7 @@ public class Game1Activity extends AppCompatActivity {
             buff = buff + c.substring(0,result1+1);
             String d[] = c.split(",");
             d[1] = "(" + d[1];
-            buff = buff + "0,";
+            buff = buff + d[0] + ",";
             xvalueGet3(d[1]);
         }
         else if(true){
