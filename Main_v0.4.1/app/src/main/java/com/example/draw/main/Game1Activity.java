@@ -594,8 +594,8 @@ public class Game1Activity extends AppCompatActivity {
         double y = 0;
         //範囲がxのとき
         if(XorYrange == 10){
-            for(x = gmin; x < gmax; x += 0.1){
-                for(y = -10; y < 10; y += 0.1){
+            for(x = gmin; x < gmax; x += 0.01){
+                for(y = -10; y < 10; y += 0.01){
                     if(a*x*x+b*x+c*y*y+d*y == r){
                         series = new PointsGraphSeries<>();
                         //線の太さ
@@ -710,14 +710,14 @@ public class Game1Activity extends AppCompatActivity {
                 //a[1]の文字列を","の文字で分割、b[0]に","より前半の文字列を格納、b[1]に","より後半の文字列を格納
                 String b[] = a[0].split(",", 0);
                     if(b[1].length() != 0){
-                    buff = b[0];
+                    buff = a[0].substring(0, checkx2 + 1);
                     EnvalueX(b[1], a[1]);
                 }
 
 
             }
             else{
-                buff = buff + "0,";
+                buff = "0,";
                 EnvalueX(a[0], a[1]);
             }
 
