@@ -36,6 +36,7 @@ public class Game1Activity extends AppCompatActivity {
     private int NumberOfAnswer = 4;
     //難易度別に問題を選択するための変数
     private int NumberOfSection = 0;
+    private int FunctionFlag = 7;
 
     private Button answerButton1;
     private Button answerButton2;
@@ -59,9 +60,9 @@ public class Game1Activity extends AppCompatActivity {
     private String buff;
 
     //CSVから取得した関数の各係数などの値を格納する二次元配列
-    private double suuji[][] = new double[11][7];
+    private double suuji[][] = new double[11][8];
     //suuji2[0]が１の時Y =、0の時X=の関数
-    private double suuji2[] = new double[7];
+    private double suuji2[] = new double[8];
 
     Handler handler;
     Runnable runnable;
@@ -273,12 +274,18 @@ public class Game1Activity extends AppCompatActivity {
         for (int i = 1; i < 11; i++) {
             str = questions[NumberOfSection][i];
             xvalueGet(str);
-            suuji2 = strChange(buff);
-            for(int j=0; j<7; j++){
+            //格納された値からn次関数(FunctionFlag = 7)か円の式(FunctionFlag = 8)か判定
+            String test[] = buff.split(",");
+            if(Double.parseDouble(test[0]) > 9){
+                FunctionFlag = 8;
+            }
+            suuji2 = strChange(buff, FunctionFlag);
+            for(int j=0; j<FunctionFlag; j++){
                 //二次元配列に係数を格納している
                 suuji[i][j] = suuji2[j];
             }
             judge = null;
+            buff = null;
         }
 
         //お題を黒でプロットするメソッド,答えの数を引数にしてある
@@ -481,7 +488,8 @@ public class Game1Activity extends AppCompatActivity {
                 drawYGraphView(graph, suuji[Num[number]][5], suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.RED);
                 time = time - 10;
             }
-        } else {
+        }
+        else if(suuji[Num[number]][0] == 0) {
             if(Num[number] <= NumberOfAnswer){
                 drawXGraphView(graph, suuji[Num[number]][5], suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.BLUE);
                 answer_count++;
@@ -491,6 +499,17 @@ public class Game1Activity extends AppCompatActivity {
                 time = time - 10;
             }
         }
+        else{
+            if(Num[number] <= NumberOfAnswer){
+                drawEnGraphView(graph, suuji[Num[number]][0], suuji[Num[number]][6], suuji[Num[number]][7], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], suuji[Num[number]][5], Color.GREEN);
+                answer_count++;
+            }
+            else {
+                drawEnGraphView(graph, suuji[Num[number]][0], suuji[Num[number]][6], suuji[Num[number]][7], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], suuji[Num[number]][5], Color.RED);
+                time = time -10;
+            }
+        }
+
 
         //解答の正解数が設定した問題の正解数と一致したときに画面遷移
         if (answer_count == NumberOfAnswer) {
@@ -569,6 +588,47 @@ public class Game1Activity extends AppCompatActivity {
         }
     }
 
+    //円の式のグラフを描画する(ax^2+bx+cy^2+dy=r)
+    private void drawEnGraphView(GraphView graph,double XorYrange, double gmin, double gmax, double a, double b, double c, double d, double r, int color){
+        double x = 0;
+        double y = 0;
+        //範囲がxのとき
+        if(XorYrange == 10){
+            for(x = gmin; x < gmax; x += 0.1){
+                for(y = -10; y < 10; y += 0.1){
+                    if(a*x*x+b*x+c*y*y+d*y == r){
+                        series = new PointsGraphSeries<>();
+                        //線の太さ
+                        series.setSize(3.0f);
+                        //線の色
+                        series.setColor(color);
+
+                        series.appendData(new DataPoint(x, y), false, 2000);
+                        graph.addSeries(series);
+                    }
+                }
+            }
+        }
+        //範囲がyのとき
+        else{
+            for(x = -10; x < 10; x += 0.1){
+                for(y = gmin; y < gmax; y += 0.1){
+                    if(a*x*x+b*x+c*y*y+d*y == r){
+                        series = new PointsGraphSeries<>();
+                        //線の太さ
+                        series.setSize(3.0f);
+                        //線の色
+                        series.setColor(color);
+
+                        series.appendData(new DataPoint(x, y), false, 2000);
+                        graph.addSeries(series);
+                    }
+                }
+            }
+        }
+
+    }
+
     //CSVからお題をプロット
     private void plotMain(int NumberOfAnswer){
         graph = findViewById(R.id.graph1);
@@ -576,9 +636,12 @@ public class Game1Activity extends AppCompatActivity {
         for(int i=0;i<NumberOfAnswer+1;i++){
             if (suuji[i][0] == 1) {
                 drawYGraphView(graph, suuji[i][5], suuji[i][6], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], Color.BLACK);
-            } else {
+            } else if (suuji[i][0] == 0){
                 drawXGraphView(graph, suuji[i][5], suuji[i][6], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], Color.BLACK);
 
+            }
+            else{
+                drawEnGraphView(graph, suuji[i][0], suuji[i][6], suuji[i][7], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], suuji[i][5], Color.BLACK);
             }
         }
     }
@@ -590,46 +653,183 @@ public class Game1Activity extends AppCompatActivity {
         //"="の前の文字がxかyかの判定
         String a[] = value.split("=");
         judge = a[0];
-        //Yの関数の場合judgeにXを格納、また１の時にYの関数と判定
-        if(judge.equals("y")){
-            judge = "x";
-            buff = "1,";
-        }
-        //Xの関数の場合judgeにXを格納、また０の時にXの関数と判定
-        else{
-            judge = "y";
-            buff = "0,";
-        }
+        //"="の前の文字数を数えることで円の式かn次関数かを判定
+        //n次関数のとき
+        if(a[0].length() == 1){
+            //Yの関数の場合judgeにXを格納、また１の時にYの関数と判定
+            if(judge.equals("y")){
+                judge = "x";
+                buff = "1,";
+            }
+            //Xの関数の場合judgeにXを格納、また０の時にXの関数と判定
+            else{
+                judge = "y";
+                buff = "0,";
+            }
 
-        //"x^3+"が文字列内に存在しない場合resultに-1を格納
-        int result = a[1].indexOf(judge + "^3");
-        int result2 = a[1].indexOf(judge + "^3(");
-        if (result != -1) {
-            if (result2 != -1) {
-                a[1] = a[1].replace(judge + "^3(", ",");
-                buff = buff + a[1].substring(0, result2 + 1);
-                String b[] = a[1].split(",");
-                b[1] = "(" + b[1];
+            //"x^3+"が文字列内に存在しない場合resultに-1を格納
+            int result = a[1].indexOf(judge + "^3");
+            int result2 = a[1].indexOf(judge + "^3(");
+            if (result != -1) {
+                if (result2 != -1) {
+                    a[1] = a[1].replace(judge + "^3(", ",");
+                    buff = buff + a[1].substring(0, result2 + 1);
+                    String b[] = a[1].split(",");
+                    b[1] = "(" + b[1];
+                    buff = buff + "0,";
+                    xvalueGet3(b[1]);
+                } else {
+                    //judgeがXの場合、文字列"x^3+"を文字列","に変換
+                    a[1] = a[1].replace(judge + "^3+", ",");
+                    a[1] = a[1].replace(judge + "^3-", ",");
+
+                    //a[1]の文字列のインデックスが1からresult + 1までの文字列をbuffに格納
+                    buff = a[1].substring(0, result + 1);
+
+                    //a[1]の文字列を","の文字で分割、b[0]に","より前半の文字列を格納、b[1]に","より後半の文字列を格納
+                    String b[] = a[1].split(",");
+                    xvalueGet1(b[1]);
+                }
+            }
+            else {
                 buff = buff + "0,";
-                xvalueGet3(b[1]);
-            } else {
-                //judgeがXの場合、文字列"x^3+"を文字列","に変換
-                a[1] = a[1].replace(judge + "^3+", ",");
-                a[1] = a[1].replace(judge + "^3-", ",");
-
-                //a[1]の文字列のインデックスが1からresult + 1までの文字列をbuffに格納
-                buff = a[1].substring(0, result + 1);
-
-                //a[1]の文字列を","の文字で分割、b[0]に","より前半の文字列を格納、b[1]に","より後半の文字列を格納
-                String b[] = a[1].split(",");
-                xvalueGet1(b[1]);
+                xvalueGet1(a[1]);
             }
         }
-        else {
+        //円の式のとき
+        else{
+            //変数ごとに存在しなければ-1を格納
+            int checkx2 = a[0].indexOf("x^2");
+            if(checkx2 != -1){
+               a[0] = a[0].replace("x^2+",",");
+               a[0] = a[0].replace("x^2-",",");
+               a[0] = a[0].replace("x^2",",");
+                //a[1]の文字列のインデックスが1からresult + 1までの文字列をbuffに格納
+//                buff = buff + a[0].substring(0, checkx2 + 1);
+
+                //a[1]の文字列を","の文字で分割、b[0]に","より前半の文字列を格納、b[1]に","より後半の文字列を格納
+                String b[] = a[0].split(",", 0);
+                    if(b[1].length() != 0){
+                    buff = b[0];
+                    EnvalueX(b[1], a[1]);
+                }
+
+
+            }
+            else{
+                buff = buff + "0,";
+                EnvalueX(a[0], a[1]);
+            }
+
+        }
+
+    }
+
+    //ennox
+    private void EnvalueX(String b, String r){
+        //変数ごとに存在しなければ-1を格納
+        int checkx = b.indexOf("x");
+        if(checkx != -1){
+
+            b = b.replace("x+",",");
+            b = b.replace("x-",",");
+            b = b.replace("x",",");
+            //a[1]の文字列のインデックスが1からresult + 1までの文字列をbuffに格納
+            buff = buff + b.substring(0, checkx + 1);
+
+            //a[1]の文字列を","の文字で分割、b[0]に","より前半の文字列を格納、b[1]に","より後半の文字列を格納
+            String c[] = b.split(",");
+            EnvalueY2(c[1], r);
+
+        }
+        else{
             buff = buff + "0,";
-            xvalueGet1(a[1]);
+            EnvalueY2(b, r);
         }
     }
+
+    //ennnoy^2
+    private void EnvalueY2(String c, String r){
+        //変数ごとに存在しなければ-1を格納
+        int checky2 = c.indexOf("y^2");
+        if(checky2 != -1){
+
+            c = c.replace("y^2+",",");
+            c = c.replace("y^2-",",");
+            c = c.replace("y^2",",");
+            //a[1]の文字列のインデックスが1からresult + 1までの文字列をbuffに格納
+            buff = buff + c.substring(0, checky2 + 1);
+
+            //a[1]の文字列を","の文字で分割、b[0]に","より前半の文字列を格納、b[1]に","より後半の文字列を格納
+            String d[] = c.split(",");
+            EnvalueY(d[1], r);
+
+        }
+        else{
+            buff = buff + "0,";
+            EnvalueY(c, r);
+        }
+    }
+
+    //ennnoy
+    private void EnvalueY(String d, String r){
+        //変数ごとに存在しなければ-1を格納
+        int checky = d.indexOf("y");
+        if(checky != -1){
+
+            d =d.replace("y+",",");
+            d = d.replace("y-",",");
+            d = d.replace("y",",");
+            //a[1]の文字列のインデックスが1からresult + 1までの文字列をbuffに格納
+            buff = buff + d.substring(0, checky + 1);
+
+            //a[1]の文字列を","の文字で分割、b[0]に","より前半の文字列を格納、b[1]に","より後半の文字列を格納
+            String c[] = d.split(",");
+            EnvalueR(r);
+
+        }
+        else{
+            buff = buff + "0,";
+            EnvalueR(r);
+        }
+    }
+
+    //ennnouhen
+    private void EnvalueR(String r){
+        //変数ごとに存在しなければ-1を格納
+        int checkr = r.indexOf("(");
+        if(checkr != -1){
+            int RLength = r.length();
+//            buff = buff + r.substring(0, RLength-1);
+            r = r.replace("(",",");
+            int checkRx = r.indexOf("x");
+            int checkRy = r.indexOf("y");
+            //範囲がx
+            if(checkRx != -1){
+                r = r.replace("<x<", ",");
+                //buffの先頭に10を格納→x範囲の円の式
+                buff = "10, " + buff + r;
+            }
+            else{
+                //範囲がy
+                if(checkRy != -1){
+                    r = r.replace("<y<", "<");
+                    //buffの先頭に11を格納→y範囲の円の式
+                    buff = "11, " +  buff + r;
+                }
+                else{
+                    //範囲なし
+                    buff = "10, " + buff + r + ", -10, 10";
+                }
+            }
+
+        }
+        else{
+            //範囲なし
+            buff = "10, " +  buff + r + ", -10, 10";
+        }
+    }
+
 
     //csvからx^2の係数を取得するメソッド
     private void xvalueGet1(String b) {
@@ -714,10 +914,13 @@ public class Game1Activity extends AppCompatActivity {
     //result[４]は切片
     //result[５]は関数の範囲の値が小さい方の値
     //result[６]は関数の範囲の値が大きい方の値
-    private double[] strChange(String buf){
-        double result[] = new double[7];
-        String a[] = buf.split(",",7);
-        for(int i=0;i<7;i++){
+    //または
+    //result[0]から範囲がxかyか，result[1] x^2の係数，result[2]xの係数，result[3] y^２の係数，result[4] yの係数
+    //result[5] r^２の値，result[6] 範囲の最小値，result[7] 範囲の最大値
+    private double[] strChange(String buf, int funcflag){
+        double result[] = new double[funcflag];
+        String a[] = buf.split(",",funcflag);
+        for(int i=0;i<funcflag;i++){
             if(a[i].isEmpty()){
                 result[i] = 1;
             }
