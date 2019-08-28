@@ -474,7 +474,7 @@ public class Game1Activity extends AppCompatActivity {
 
         if (suuji[Num[number]][0] == 1) {
             if(Num[number] <= NumberOfAnswer){
-                drawYGraphView(graph, suuji[Num[number]][5], suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.parseColor("#FF00C0"));
+                drawYGraphView(graph, suuji[Num[number]][5], suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.parseColor("#00adff"));
                 answer_count++;
 //                //正解すると時間を5秒増やす
 //                time = time + 5;
@@ -488,7 +488,7 @@ public class Game1Activity extends AppCompatActivity {
             }
         } else {
             if(Num[number] <= NumberOfAnswer){
-                drawXGraphView(graph, suuji[Num[number]][5], suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.GREEN);
+                drawXGraphView(graph, suuji[Num[number]][5], suuji[Num[number]][6], suuji[Num[number]][1], suuji[Num[number]][2], suuji[Num[number]][3], suuji[Num[number]][4], Color.parseColor("#00adff"));
                 answer_count++;
                 //正解すると時間を5秒増やす
 //                time = time + 5;
@@ -585,9 +585,9 @@ public class Game1Activity extends AppCompatActivity {
 
         for(int i=0;i<NumberOfAnswer+1;i++){
             if (suuji[i][0] == 1) {
-                drawYGraphView(graph, suuji[i][5], suuji[i][6], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], Color.YELLOW);
+                drawYGraphView(graph, suuji[i][5], suuji[i][6], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], Color.parseColor("#bec500"));
             } else {
-                drawXGraphView(graph, suuji[i][5], suuji[i][6], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], Color.YELLOW);
+                drawXGraphView(graph, suuji[i][5], suuji[i][6], suuji[i][1], suuji[i][2], suuji[i][3], suuji[i][4], Color.parseColor("#bec500"));
 
             }
         }
