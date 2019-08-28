@@ -93,12 +93,15 @@ public class GamestartActivity extends AppCompatActivity {
 //                    break;
                 case 111:
                     tv.setText("高校一年生レベル1");
+                    tv1.setText("正解の選択数は4つ");
                     break;
                 case 112:
                     tv.setText("高校一年生レベル2");
+                    tv1.setText("正解の選択数は4つ");
                     break;
                 case 113:
                     tv.setText("高校一年生レベル3");
+                    tv1.setText("正解の選択数は4つ");
                     break;
                 case 114:
 //                    tv.setText("高校一年生レベル4");
@@ -108,12 +111,15 @@ public class GamestartActivity extends AppCompatActivity {
                     break;
                 case 121:
                     tv.setText("高校二年生レベル1");
+                    tv1.setText("正解の選択数は4つ");
                     break;
                 case 122:
                     tv.setText("高校二年生レベル2");
+                    tv1.setText("正解の選択数は4つ");
                     break;
                 case 123:
                     tv.setText("高校二年生レベル3");
+                    tv1.setText("正解の選択数は4つ");
                     break;
                 case 124:
 //                    tv.setText("高校二年生レベル4");
@@ -123,12 +129,15 @@ public class GamestartActivity extends AppCompatActivity {
 //                    break;
                 case 131:
                     tv.setText("高校三年生レベル1");
+                    tv1.setText("正解の選択数は4つ");
                     break;
                 case 132:
                     tv.setText("高校三年生レベル2");
+                    tv1.setText("正解の選択数は4つ");
                     break;
                 case 133:
                     tv.setText("高校三年生レベル3");
+                    tv1.setText("正解の選択数は4つ");
                     break;
 //                case 134:
 //                    tv.setText("高校三年生レベル4");
@@ -141,16 +150,33 @@ public class GamestartActivity extends AppCompatActivity {
                     break;
             }
 
-            //変数nannidoをGame1Activityに渡し、画面遷移
-            Button button = findViewById(R.id.buttonStart);
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(GamestartActivity.this, Game1Activity.class);
-                    intent.putExtra("難易度", trans);
-                    startActivity(intent);
-                }
-            });
+            //tyuugakusei
+            if(nannido1 < 100){
+                //変数nannidoをGame1Activityに渡し、画面遷移
+                Button button = findViewById(R.id.buttonStart);
+                button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(GamestartActivity.this, Game1Activity.class);
+                        intent.putExtra("難易度", trans);
+                        startActivity(intent);
+                    }
+                });
+            }
+            //koukousei
+            else{
+                //変数nannidoをGame1Activityに渡し、画面遷移
+                Button button = findViewById(R.id.buttonStart);
+                button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(GamestartActivity.this, Game2Activity.class);
+                        intent.putExtra("難易度", trans);
+                        startActivity(intent);
+                    }
+                });
+            }
+
 
         }
 
