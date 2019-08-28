@@ -611,8 +611,8 @@ public class Game1Activity extends AppCompatActivity {
         }
         //範囲がyのとき
         else{
-            for(x = -10; x < 10; x += 0.1){
-                for(y = gmin; y < gmax; y += 0.1){
+            for(x = -10; x < 10; x += 0.01){
+                for(y = gmin; y < gmax; y += 0.01){
                     if(a*x*x+b*x+c*y*y+d*y == r){
                         series = new PointsGraphSeries<>();
                         //線の太さ
