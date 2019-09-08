@@ -1032,9 +1032,10 @@ public class Game1Activity extends AppCompatActivity {
                 c[1] = "(" + c[1];
                 buff = buff + "0,";
                 xvalueGet3(c[1]);
-            } else {
+            }
+            else {
                 b = b.replace(judge + "^2+", ",");
-                b = b.replace(judge + "^2-", ",");
+                b = b.replace(judge + "^2", ",");
                 buff = buff + b.substring(0, result + 1);
                 String c[] = b.split(",");
                 xvalueGet2(c[1]);

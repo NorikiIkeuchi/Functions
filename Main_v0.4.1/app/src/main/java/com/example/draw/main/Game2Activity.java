@@ -192,7 +192,7 @@ public class Game2Activity extends AppCompatActivity {
                     break;
                 case 112:
                     //高校一年生レベル2
-                    NumberOfAnswer = 4;
+                    NumberOfAnswer = 11;
                     NumberOfSection = 10;
                     break;
                 case 113:
@@ -1082,14 +1082,14 @@ public class Game2Activity extends AppCompatActivity {
                 }
                 else{
                     //範囲なし
-                    buff = "10," + buff + r + ",-10,10";
+                    buff = "10," + buff + r + "-10,10";
                 }
             }
 
         }
         else{
             //範囲なし
-            buff = "10," +  buff + r + ",-10,10";
+            buff = "10," +  buff + r + "-10,10";
         }
     }
 
@@ -1191,7 +1191,7 @@ public class Game2Activity extends AppCompatActivity {
                 //String型からDouble型へ変換
                 result[i] = -1;
             }
-            else if(true){
+            else{
                 result[i] = Double.parseDouble(a[i]);
             }
         }
